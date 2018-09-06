@@ -1,0 +1,1723 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>OpenGlamMx 2018 BDCV</title>
+
+		<meta name="description" content="Una presentación sobre lo que aprendimos de los datos del DH2016">
+		<meta name="author" content="Silvia" >
+
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/simple.css" id="theme">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+					<h2>Abriendo colecciones:<h2>
+					<h6>la experiencia de la Biblioteca Daniel Cosío Villegas</h6>
+					<p>
+						<small> Silvia Gutiérrez | <a href="https://twitter.com/espejolento">@espejolento</a> | Bibliotecaria de Humanidades Digitales </small><br/>
+                    </p>
+                    </section>
+                    <section data-background="https://media.giphy.com/media/11ns7WPRC1RjGw/giphy.gif">
+						<h6 style="color:#363636; background-color:#F2F0F0; padding:1px;">Biblioteca Daniel Cosío Villegas</h6>
+						<p class="fragment" style="color:#363636; background-color:#F2F0F0;">medio millón de libros</p>
+						<p class="fragment" style="color:#363636; background-color:#F2F0F0;">25 km de estantería</p>
+					</section>
+					<section>
+						<section>
+							<h3>Caso 1. Abrir para encontrar</h3>
+							<img data-src="lost.gif">
+						</section>
+						<section>
+						<h3>25 km de estantería</h3>
+						<img data-src="25km.png" alt="mapa con una ruta de 25 km para entender lo que esa distancia significa">
+					</section>
+						<section>
+							<h3>Clasificación, ficheros y lenguajes controlados</h3>
+							<div class="row">
+								<div class="column">
+									<img class="fragment" src="https://thumbs.dreamstime.com/t/fichero-de-la-biblioteca-37233472.jpg" alt="ficheros de bibliotecas" style="width:100%">
+								</div>
+								<div class="column">
+									<img class="fragment" src="tomos_dewey.png" alt="tomos de dewey" style="width:100%">
+								</div>
+								<div class="column">
+									<img class="fragment" src="http://sites.dartmouth.edu/library/files/2016/03/lcsh.jpg" alt="LCSH" style="width:100%">
+								</div>
+							</div>
+						</section>
+						<section>
+							<h3>Organizar ✔️, ¿y comunicar?</h3>
+							<img class="fragment" data-src="doyouspeakit.png" alt="ficheros de bibliotecas">
+						</section>
+						<section>
+							<h3>Clasificación Decimal Dewey</h3>
+							<div style="position:relative; width:640px; height:480px; margin:0 auto;">
+								<img class="fragment" width="640" height="480" src="http://www.designisthenorm.com/wp-content/uploads/2012/10/ddc_3.jpg" style="position:absolute;top:0;left:0;" />
+								<img class="fragment" width="640" height="480" src="dewey_sistema.png" style="position:absolute;top:0;left:0;" />
+							</div>
+						</section>
+						<section>
+						<h3>La Colección de la BDCV según su Clasificación Decimal Dewey</h3>
+							<body style="overflow:hidden;height:100%;">
+								<iframe class="stretch" data-src="http://sandbox.colmex.mx/~silvia/metadata_sun/"></iframe>
+							</body>
+						</section>
+						<!--Visualización de la British Library!-->
+					<section>
+					    <h3>La colección de la Biblioteca Británica según su DDC</h3>
+						<div class="sqs-block code-block sqs-block-code" data-block-type="23" id="block-yui_3_17_2_5_1419847915951_4610"><div class="sqs-block-content"><!DOCTYPE html>
+<meta charset="utf-8">
+<title>DDC zoomable treemap</title>
+<style>
+
+#chart1 {
+  width: 960px;
+  height: 500px;
+  background: #ddd;
+  /* centre SVG horizontally */
+  position: relative;
+  left: 50%;
+  margin-left: -475px;
+}
+
+text {
+  pointer-events: none;
+  font-family: sans-serif;
+}
+
+.grandparent text {
+  font-size: 11px;
+}
+
+.children text {
+  font-size: 11px;
+}
+    
+rect {
+  fill: none;
+  stroke: #fff;
+}
+
+rect.parent,
+.grandparent rect {
+  stroke-width: 2px;
+}
+
+.grandparent rect {
+  fill: lightblue   ; 
+}
+
+.grandparent:hover rect {
+  fill:  #85d0e8 ;
+}
+
+.children rect.parent,
+.grandparent rect {
+  cursor: pointer;
+}
+
+.children rect.parent {
+  fill: #bbb;
+  fill-opacity: .5;
+}
+
+.children:hover rect.child {
+  fill: #bbb;
+}
+    
+</style>
+
+<div id="chart1"></div>
+
+<script src="http://d3js.org/d3.v3.min.js"></script>
+<script>
+
+var margin = {top: 20, right: 0, bottom: 0, left: 0},
+    width = 960,
+    height = 500 - margin.top - margin.bottom,
+    formatNumber = d3.format(",d"),
+    transitioning;
+
+var x = d3.scale.linear()
+    .domain([0, width])
+    .range([0, width]);
+
+var y = d3.scale.linear()
+    .domain([0, height])
+    .range([0, height]);
+
+
+var hue = d3.scale.ordinal()
+    .range(['#8dd3c7','#ffffb3','#bebada','#fb8072','#80b1d3',
+            '#fdb462','#b3de69','#fccde5','#d9d9d9','#bc80bd'])
+    .domain(['0','1','2','3','4','5','6','7','8','9'])
+;
+    
+var luminance = d3.scale.sqrt()
+    .domain([1000, 300000])   
+    .clamp(true)
+    .range([98, 75]);  
+  ;
+
+var treemap = d3.layout.treemap()
+    .children(function(d, depth) { return depth ? null : d._children; })
+    .sort(function(a, b) { return a.value - b.value; })
+    .ratio(height / width * 0.5 * (1 + Math.sqrt(5)))
+    .round(false);
+
+var svg = d3.select("#chart1").append("svg:svg")
+    .attr("width", width + margin.left + margin.right)
+    .attr("height", height + margin.bottom + margin.top)
+    .style("margin-left", -margin.left + "px")
+    .style("margin.right", -margin.right + "px")
+  .append("g")
+    .attr("transform", "translate(" + margin.left + "," + margin.top + ")")
+    .style("shape-rendering", "crispEdges");
+    
+var grandparent = svg.append("g")
+    .attr("class", "grandparent");
+
+grandparent.append("rect")   
+    .attr("y", -margin.top)
+    .attr("width", width)
+    .attr("height", margin.top)
+    ;
+
+grandparent.append("text")
+    .attr("x", 6)
+    .attr("y", 6 - margin.top)
+    .attr("dy", ".75em")
+    .attr("font-weight", "bold")
+;
+
+grandparent.append("text")
+    .attr("x", width - margin.right - 6)
+    .attr("y", 6 - margin.top)
+    .attr("dy", ".75em")
+    .attr('text-anchor', "end")
+    .attr("font-style", "italic")
+    .style("font-size","10")
+    .text("Click a category to zoom in; click header bar to zoom out")
+;
+
+
+  root = getData();
+
+  initialize(root);
+  accumulate(root);
+  layout(root);
+  display(root);
+
+  function initialize(root) {
+    root.x = root.y = 0;
+    root.dx = width;
+    root.dy = height;
+    root.depth = 0;
+  }
+
+  // Aggregate the values for internal nodes. 
+  function accumulate(d) {
+    return (d._children = d.children)
+        ? d.value = d.children.reduce(function(p, v) { return p + accumulate(v); }, 0)
+        : d.value;
+  }
+
+
+function layout(d) {
+    if (d._children) {
+      treemap.nodes({_children: d._children});
+      d._children.forEach(function(c) {
+        c.x = d.x + c.x * d.dx;
+        c.y = d.y + c.y * d.dy;
+        c.dx *= d.dx;
+        c.dy *= d.dy;
+        c.parent = d;
+        layout(c);
+      });
+    }
+  }
+
+  function display(d) {
+ 
+    grandparent
+        .datum(d.parent)
+        .on("click", transition)
+      .select("text")
+        .text(name(d));
+
+    var g1 = svg.insert("g", ".grandparent")
+        .datum(d)
+        .attr("class", "depth");
+
+    var g = g1.selectAll("g")
+        .data(d._children)
+      .enter().append("g");
+
+    g.filter(function(d) { return d._children; })
+        .classed("children", true)
+        .on("click", transition)
+    ;
+
+    g.selectAll(".child")
+        .data(function(d) { return d._children || [d]; })
+      .enter().append("rect")
+        .attr("class", "child")
+        .call(rect)   
+    ; 
+
+
+    g.append("rect")
+        .attr("class", "parent")
+        .call(rect)
+      .append("svg:title")    // mouseover title
+        .text(function(d) { 
+                value_pct_1 = 100 * d.value / 4756297;
+                value_pct_2 = value_pct_1.toFixed(2) + '%';
+                return d.title + " (" + value_pct_2 + ")";
+        })   
+    ; 
+
+      g.append("foreignObject")
+        .call(foreignText)
+      .attr("class","foreignobj")
+        .append("xhtml:div") 
+            .attr("dy", ".75em")
+            .html(function(d) {           
+                // add DDC to title
+                var namelen = d.name.length;
+
+                if (namelen == 1) {
+                    return d.title + ' (' + d.name + '00s)'; 
+                } else if (namelen == 2) {
+                    return d.title + ' (' + d.name + '0s)'; 
+                } else {
+                    return d.title + ' (' + d.name + ')'; 
+                }
+            })
+            .style("font-size","11px")
+            .style("font-family","sans-serif")
+            .attr("class","textdiv")
+      ;
+
+    function transition(d) {
+      if (transitioning || !d) return;
+      transitioning = true;
+
+      var g2 = display(d),
+          t1 = g1.transition().duration(750),
+          t2 = g2.transition().duration(750);
+
+      x.domain([d.x, d.x + d.dx]);
+      y.domain([d.y, d.y + d.dy]);
+
+      svg.style("shape-rendering", null);
+
+      // Draw child nodes on top of parent nodes.
+      svg.selectAll(".depth").sort(function(a, b) { return a.depth - b.depth; });
+
+      // turn on entering text.
+      g2.selectAll("foreignObject div").style("display", "none"); 
+        
+      // Transition to the new view.
+      t1.selectAll("rect").call(rect);
+      t2.selectAll("rect").call(rect);
+
+      t1.selectAll(".textdiv").style("display", "none"); /* added */
+      t1.selectAll(".foreignobj").call(foreignText);
+      t2.selectAll(".textdiv").style("display", "block");               
+      t2.selectAll(".foreignobj").call(foreignText); 
+
+    // hide labels for boxes that are likely to be too small for them
+    t2.selectAll(".textdiv").style("display", function(d) {        
+            if ((y(d.y + d.dy) - y(d.y)) < 50) {return "none"};
+            if ((x(d.x + d.dx) - x(d.x)) < 50) {return "none"}; 
+    });
+
+      // Remove the old node when the transition is finished.
+      t1.remove().each("end", function() {
+        svg.style("shape-rendering", "crispEdges");
+        transitioning = false;
+      });
+    }
+
+    return g;
+  }
+
+  function text(text) {
+    text.attr("x", function(d) { return x(d.x) + 6; })
+        .attr("y", function(d) { return y(d.y) + 6; });
+  }
+
+  function rect(rect) {
+    rect.attr("x", function(d) { return x(d.x); })
+        .attr("y", function(d) { return y(d.y); })
+        .attr("width", function(d) { return x(d.x + d.dx) - x(d.x); })
+        .attr("height", function(d) { return y(d.y + d.dy) - y(d.y); })
+        .style('fill',function(d) {
+          return fill(d);
+        });
+  }
+
+  // sizes foreignObject rectangle for storing wrapped text 
+  function foreignText(foreign){  
+      foreign.attr("x", function(d) { return x(d.x) + 6; })
+        .attr("y", function(d) { return y(d.y) + 6; })
+        .attr("width", function(d) { 
+            return Math.max(x(d.x + d.dx) - x(d.x) - 10,0);  // narrowed 
+        })
+        .attr("height", function(d) { return y(d.y + d.dy) - y(d.y); });
+  }
+    
+  function name(d) {
+    return d.parent
+        ? name(d.parent) + ": " + d.title
+        : d.title;
+  }
+
+
+function fill(d) {    
+    var c = d3.lab(hue(d.name.charAt(0)));
+     c.l = luminance(d.value); 
+    return c;
+  }
+
+
+
+function getData() {
+
+    var data = [
+ { 'name': '_', 'title': 'DDC'}
+,{ 'name': '0', 'title': 'Computer science, information & general works', 'father': '_'}
+,{ 'name': '1', 'title': 'Philosophy & psychology', 'father': '_'}
+,{ 'name': '2', 'title': 'Religion', 'father': '_'}
+,{ 'name': '3', 'title': 'Social sciences', 'father': '_'}
+,{ 'name': '4', 'title': 'Language', 'father': '_'}
+,{ 'name': '5', 'title': 'Science', 'father': '_'}
+,{ 'name': '6', 'title': 'Technology', 'father': '_'}
+,{ 'name': '7', 'title': 'Arts & recreation', 'father': '_'}
+,{ 'name': '8', 'title': 'Literature', 'father': '_'}
+,{ 'name': '9', 'title': 'History & geography', 'father': '_'}
+,{ 'name': '00', 'title': 'Computer science, knowledge & systems', 'father': '0'}
+,{ 'name': '01', 'title': 'Bibliographies', 'father': '0'}
+,{ 'name': '02', 'title': 'Library & information sciences', 'father': '0'}
+,{ 'name': '03', 'title': 'Encyclopedias & books of facts', 'father': '0'}
+,{ 'name': '04', 'title': '[Unassigned]', 'father': '0'}
+,{ 'name': '05', 'title': 'Magazines, journals & serials', 'father': '0'}
+,{ 'name': '06', 'title': 'Associations, organizations & museums', 'father': '0'}
+,{ 'name': '07', 'title': 'News media, journalism & publishing', 'father': '0'}
+,{ 'name': '08', 'title': 'Quotations', 'father': '0'}
+,{ 'name': '09', 'title': 'Manuscripts & rare books', 'father': '0'}
+,{ 'name': '10', 'title': 'Philosophy', 'father': '1'}
+,{ 'name': '11', 'title': 'Metaphysics', 'father': '1'}
+,{ 'name': '12', 'title': 'Epistemology', 'father': '1'}
+,{ 'name': '13', 'title': 'Parapsychology & occultism', 'father': '1'}
+,{ 'name': '14', 'title': 'Philosophical schools of thought', 'father': '1'}
+,{ 'name': '15', 'title': 'Psychology', 'father': '1'}
+,{ 'name': '16', 'title': 'Logic', 'father': '1'}
+,{ 'name': '17', 'title': 'Ethics', 'father': '1'}
+,{ 'name': '18', 'title': 'Ancient, medieval & eastern philosophy', 'father': '1'}
+,{ 'name': '19', 'title': 'Modern western philosophy', 'father': '1'}
+,{ 'name': '20', 'title': 'Religion', 'father': '2'}
+,{ 'name': '21', 'title': 'Philosophy & theory of religion', 'father': '2'}
+,{ 'name': '22', 'title': 'The Bible', 'father': '2'}
+,{ 'name': '23', 'title': 'Christianity & Christian theology', 'father': '2'}
+,{ 'name': '24', 'title': 'Christian practice & observance', 'father': '2'}
+,{ 'name': '25', 'title': 'Christian pastoral practice & religious orders', 'father': '2'}
+,{ 'name': '26', 'title': 'Christian organization, social work & worship', 'father': '2'}
+,{ 'name': '27', 'title': 'History of Christianity', 'father': '2'}
+,{ 'name': '28', 'title': 'Christian denominations', 'father': '2'}
+,{ 'name': '29', 'title': 'Other religions', 'father': '2'}
+,{ 'name': '30', 'title': 'Social sciences, sociology & anthropology', 'father': '3'}
+,{ 'name': '31', 'title': 'Statistics', 'father': '3'}
+,{ 'name': '32', 'title': 'Political science', 'father': '3'}
+,{ 'name': '33', 'title': 'Economics', 'father': '3'}
+,{ 'name': '34', 'title': 'Law', 'father': '3'}
+,{ 'name': '35', 'title': 'Public administration & military science', 'father': '3'}
+,{ 'name': '36', 'title': 'Social problems & social services', 'father': '3'}
+,{ 'name': '37', 'title': 'Education', 'father': '3'}
+,{ 'name': '38', 'title': 'Commerce, communications & transportation', 'father': '3'}
+,{ 'name': '39', 'title': 'Customs, etiquette & folklore', 'father': '3'}
+,{ 'name': '40', 'title': 'Language', 'father': '4'}
+,{ 'name': '41', 'title': 'Linguistics', 'father': '4'}
+,{ 'name': '42', 'title': 'English & Old English languages', 'father': '4'}
+,{ 'name': '43', 'title': 'German & related languages', 'father': '4'}
+,{ 'name': '44', 'title': 'French & related languages', 'father': '4'}
+,{ 'name': '45', 'title': 'Italian, Romanian & related languages', 'father': '4'}
+,{ 'name': '46', 'title': 'Spanish & Portuguese languages', 'father': '4'}
+,{ 'name': '47', 'title': 'Latin & Italic languages', 'father': '4'}
+,{ 'name': '48', 'title': 'Classical & modern Greek languages', 'father': '4'}
+,{ 'name': '49', 'title': 'Other languages', 'father': '4'}
+,{ 'name': '50', 'title': 'Science', 'father': '5'}
+,{ 'name': '51', 'title': 'Mathematics', 'father': '5'}
+,{ 'name': '52', 'title': 'Astronomy', 'father': '5'}
+,{ 'name': '53', 'title': 'Physics', 'father': '5'}
+,{ 'name': '54', 'title': 'Chemistry', 'father': '5'}
+,{ 'name': '55', 'title': 'Earth sciences & geology', 'father': '5'}
+,{ 'name': '56', 'title': 'Fossils & prehistoric life', 'father': '5'}
+,{ 'name': '57', 'title': 'Life sciences; biology', 'father': '5'}
+,{ 'name': '58', 'title': 'Plants (Botany)', 'father': '5'}
+,{ 'name': '59', 'title': 'Animals (Zoology)', 'father': '5'}
+,{ 'name': '60', 'title': 'Technology', 'father': '6'}
+,{ 'name': '61', 'title': 'Medicine & health', 'father': '6'}
+,{ 'name': '62', 'title': 'Engineering', 'father': '6'}
+,{ 'name': '63', 'title': 'Agriculture', 'father': '6'}
+,{ 'name': '64', 'title': 'Home & family management', 'father': '6'}
+,{ 'name': '65', 'title': 'Management & public relations', 'father': '6'}
+,{ 'name': '66', 'title': 'Chemical engineering', 'father': '6'}
+,{ 'name': '67', 'title': 'Manufacturing', 'father': '6'}
+,{ 'name': '68', 'title': 'Manufacture for specific uses', 'father': '6'}
+,{ 'name': '69', 'title': 'Building & construction', 'father': '6'}
+,{ 'name': '70', 'title': 'Arts', 'father': '7'}
+,{ 'name': '71', 'title': 'Landscaping & area planning', 'father': '7'}
+,{ 'name': '72', 'title': 'Architecture', 'father': '7'}
+,{ 'name': '73', 'title': 'Sculpture, ceramics & metalwork', 'father': '7'}
+,{ 'name': '74', 'title': 'Drawing & decorative arts', 'father': '7'}
+,{ 'name': '75', 'title': 'Painting', 'father': '7'}
+,{ 'name': '76', 'title': 'Graphic arts', 'father': '7'}
+,{ 'name': '77', 'title': 'Photography & computer art', 'father': '7'}
+,{ 'name': '78', 'title': 'Music', 'father': '7'}
+,{ 'name': '79', 'title': 'Sports, games & entertainment', 'father': '7'}
+,{ 'name': '80', 'title': 'Literature, rhetoric & criticism', 'father': '8'}
+,{ 'name': '81', 'title': 'American literature in English', 'father': '8'}
+,{ 'name': '82', 'title': 'English & Old English literatures', 'father': '8'}
+,{ 'name': '83', 'title': 'German & related literatures', 'father': '8'}
+,{ 'name': '84', 'title': 'French & related literatures', 'father': '8'}
+,{ 'name': '85', 'title': 'Italian, Romanian & related literatures', 'father': '8'}
+,{ 'name': '86', 'title': 'Spanish & Portuguese literatures', 'father': '8'}
+,{ 'name': '87', 'title': 'Latin & Italic literatures', 'father': '8'}
+,{ 'name': '88', 'title': 'Classical & modern Greek literatures', 'father': '8'}
+,{ 'name': '89', 'title': 'Other literatures', 'father': '8'}
+,{ 'name': '90', 'title': 'History', 'father': '9'}
+,{ 'name': '91', 'title': 'Geography & travel', 'father': '9'}
+,{ 'name': '92', 'title': 'Biography & genealogy', 'father': '9'}
+,{ 'name': '93', 'title': 'History of ancient world (to ca. 499)', 'father': '9'}
+,{ 'name': '94', 'title': 'History of Europe', 'father': '9'}
+,{ 'name': '95', 'title': 'History of Asia', 'father': '9'}
+,{ 'name': '96', 'title': 'History of Africa', 'father': '9'}
+,{ 'name': '97', 'title': 'History of North America', 'father': '9'}
+,{ 'name': '98', 'title': 'History of South America', 'father': '9'}
+,{ 'name': '99', 'title': 'History of other areas', 'father': '9'}
+
+
+,{ 'name': '000', 'title': 'Computer science, information & general works', 'father': '00', 'value':26}
+,{ 'name': '001', 'title': 'Knowledge', 'father': '00', 'value':15877}
+,{ 'name': '002', 'title': 'The book', 'father': '00', 'value':553}
+,{ 'name': '003', 'title': 'Systems', 'father': '00', 'value':14422}
+,{ 'name': '004', 'title': 'Data processing & computer science', 'father': '00', 'value':20731}
+,{ 'name': '005', 'title': 'Computer programming, programs & data', 'father': '00', 'value':49317}
+,{ 'name': '006', 'title': 'Special computer methods', 'father': '00', 'value':18713}
+,{ 'name': '007', 'title': '[Unassigned]', 'father': '00', 'value':1}
+,{ 'name': '008', 'title': '[Unassigned]', 'father': '00', 'value':1}
+,{ 'name': '009', 'title': '[Unassigned]', 'father': '00', 'value':2}
+,{ 'name': '010', 'title': 'Bibliography', 'father': '01', 'value':309}
+,{ 'name': '011', 'title': 'Bibliographies', 'father': '01', 'value':1715}
+,{ 'name': '012', 'title': 'Bibliographies of individuals', 'father': '01', 'value':151}
+,{ 'name': '013', 'title': '[Unassigned]', 'father': '01', 'value':123}
+,{ 'name': '014', 'title': 'Bibliographies of anonymous & pseudonymous works', 'father': '01', 'value':7}
+,{ 'name': '015', 'title': 'Bibliographies of works from specific places', 'father': '01', 'value':1306}
+,{ 'name': '016', 'title': 'Bibliographies of works on specific subjects', 'father': '01', 'value':28611}
+,{ 'name': '017', 'title': 'General subject catalogs', 'father': '01', 'value':338}
+,{ 'name': '018', 'title': 'Catalogs arranged by author, date, etc.', 'father': '01', 'value':1176}
+,{ 'name': '019', 'title': 'Dictionary catalogs', 'father': '01', 'value':0}
+,{ 'name': '020', 'title': 'Library & information sciences', 'father': '02', 'value':10420}
+,{ 'name': '021', 'title': 'Library relationships', 'father': '02', 'value':1726}
+,{ 'name': '022', 'title': 'Administration of physical plant', 'father': '02', 'value':372}
+,{ 'name': '023', 'title': 'Personnel management', 'father': '02', 'value':576}
+,{ 'name': '024', 'title': '[Unassigned]', 'father': '02', 'value':19}
+,{ 'name': '025', 'title': 'Library operations', 'father': '02', 'value':16692}
+,{ 'name': '026', 'title': 'Libraries for specific subjects', 'father': '02', 'value':2309}
+,{ 'name': '027', 'title': 'General libraries', 'father': '02', 'value':8042}
+,{ 'name': '028', 'title': 'Reading & use of other information media', 'father': '02', 'value':1894}
+,{ 'name': '029', 'title': '[Unassigned]', 'father': '02', 'value':1083}
+,{ 'name': '030', 'title': 'General encyclopedic works', 'father': '03', 'value':90}
+,{ 'name': '031', 'title': 'Encyclopedias in American English', 'father': '03', 'value':360}
+,{ 'name': '032', 'title': 'Encyclopedias in English', 'father': '03', 'value':1807}
+,{ 'name': '033', 'title': 'Encyclopedias in other Germanic languages', 'father': '03', 'value':12}
+,{ 'name': '034', 'title': 'Encyclopedias in French, Occitan & Catalan', 'father': '03', 'value':41}
+,{ 'name': '035', 'title': 'Encyclopedias in Italian, Romanian & related languages', 'father': '03', 'value':0}
+,{ 'name': '036', 'title': 'Encyclopedias in Spanish & Portuguese', 'father': '03', 'value':2}
+,{ 'name': '037', 'title': 'Encyclopedias in Slavic languages', 'father': '03', 'value':34}
+,{ 'name': '038', 'title': 'Encyclopedias in Scandinavian languages', 'father': '03', 'value':0}
+,{ 'name': '039', 'title': 'Encyclopedias in other languages', 'father': '03', 'value':51}
+,{ 'name': '040', 'title': '[Unassigned]', 'father': '04', 'value':2}
+,{ 'name': '041', 'title': '[Unassigned]', 'father': '04', 'value':3}
+,{ 'name': '042', 'title': '[Unassigned]', 'father': '04', 'value':5}
+,{ 'name': '043', 'title': '[Unassigned]', 'father': '04', 'value':0}
+,{ 'name': '044', 'title': '[Unassigned]', 'father': '04', 'value':0}
+,{ 'name': '045', 'title': '[Unassigned]', 'father': '04', 'value':0}
+,{ 'name': '046', 'title': '[Unassigned]', 'father': '04', 'value':0}
+,{ 'name': '047', 'title': '[Unassigned]', 'father': '04', 'value':0}
+,{ 'name': '048', 'title': '[Unassigned]', 'father': '04', 'value':0}
+,{ 'name': '049', 'title': '[Unassigned]', 'father': '04', 'value':0}
+,{ 'name': '050', 'title': 'General serial publications', 'father': '05', 'value':72}
+,{ 'name': '051', 'title': 'Serials in American English', 'father': '05', 'value':595}
+,{ 'name': '052', 'title': 'Serials in English', 'father': '05', 'value':1578}
+,{ 'name': '053', 'title': 'Serials in other Germanic languages', 'father': '05', 'value':34}
+,{ 'name': '054', 'title': 'Serials in French, Occitan & Catalan', 'father': '05', 'value':143}
+,{ 'name': '055', 'title': 'Serials in Italian, Romanian & related languages', 'father': '05', 'value':23}
+,{ 'name': '056', 'title': 'Serials in Spanish & Portuguese', 'father': '05', 'value':16}
+,{ 'name': '057', 'title': 'Serials in Slavic languages', 'father': '05', 'value':58}
+,{ 'name': '058', 'title': 'Serials in Scandinavian languages', 'father': '05', 'value':0}
+,{ 'name': '059', 'title': 'Serials in other languages', 'father': '05', 'value':87}
+,{ 'name': '060', 'title': 'General organizations & museum science', 'father': '06', 'value':244}
+,{ 'name': '061', 'title': 'Organizations in North America', 'father': '06', 'value':56}
+,{ 'name': '062', 'title': 'Organizations in British Isles; in England', 'father': '06', 'value':195}
+,{ 'name': '063', 'title': 'Organizations in central Europe; in Germany', 'father': '06', 'value':7}
+,{ 'name': '064', 'title': 'Organizations in France & Monaco', 'father': '06', 'value':8}
+,{ 'name': '065', 'title': 'Organizations in Italy & adjacent islands', 'father': '06', 'value':4}
+,{ 'name': '066', 'title': 'Organizations in Iberian Peninsula & adjacent islands', 'father': '06', 'value':4}
+,{ 'name': '067', 'title': 'Organizations in eastern Europe; in Russia', 'father': '06', 'value':7}
+,{ 'name': '068', 'title': 'Organizations in other geographic areas', 'father': '06', 'value':137}
+,{ 'name': '069', 'title': 'Museum science', 'father': '06', 'value':2143}
+,{ 'name': '070', 'title': 'News media, journalism & publishing', 'father': '07', 'value':7800}
+,{ 'name': '071', 'title': 'Newspapers in North America', 'father': '07', 'value':436}
+,{ 'name': '072', 'title': 'Newspapers in British Isles; in England', 'father': '07', 'value':3309}
+,{ 'name': '073', 'title': 'Newspapers in central Europe; in Germany', 'father': '07', 'value':115}
+,{ 'name': '074', 'title': 'Newspapers in France & Monaco', 'father': '07', 'value':53}
+,{ 'name': '075', 'title': 'Newspapers in Italy & adjacent islands', 'father': '07', 'value':33}
+,{ 'name': '076', 'title': 'Newspapers in Iberian Peninsula & adjacent islands', 'father': '07', 'value':42}
+,{ 'name': '077', 'title': 'Newspapers in eastern Europe; in Russia', 'father': '07', 'value':24}
+,{ 'name': '078', 'title': 'Newspapers in Scandinavia', 'father': '07', 'value':10}
+,{ 'name': '079', 'title': 'Newspapers in other geographic areas', 'father': '07', 'value':427}
+,{ 'name': '080', 'title': 'General collections', 'father': '08', 'value':0}
+,{ 'name': '081', 'title': 'Collections in American English', 'father': '08', 'value':0}
+,{ 'name': '082', 'title': 'Collections in English', 'father': '08', 'value':0}
+,{ 'name': '083', 'title': 'Collections in other Germanic languages', 'father': '08', 'value':0}
+,{ 'name': '084', 'title': 'Collections in French, Occitan & Catalan', 'father': '08', 'value':0}
+,{ 'name': '085', 'title': 'Collections in Italian, Romanian & related languages', 'father': '08', 'value':0}
+,{ 'name': '086', 'title': 'Collections in Spanish & Portuguese', 'father': '08', 'value':0}
+,{ 'name': '087', 'title': 'Collections in Slavic languages', 'father': '08', 'value':0}
+,{ 'name': '088', 'title': 'Collections in Scandinavian languages', 'father': '08', 'value':0}
+,{ 'name': '089', 'title': 'Collections in other languages', 'father': '08', 'value':0}
+,{ 'name': '090', 'title': 'Manuscripts & rare books', 'father': '09', 'value':5493}
+,{ 'name': '091', 'title': 'Manuscripts', 'father': '09', 'value':548}
+,{ 'name': '092', 'title': 'Block books', 'father': '09', 'value':5}
+,{ 'name': '093', 'title': 'Incunabula', 'father': '09', 'value':32}
+,{ 'name': '094', 'title': 'Printed books', 'father': '09', 'value':67}
+,{ 'name': '095', 'title': 'Books notable for bindings', 'father': '09', 'value':86}
+,{ 'name': '096', 'title': 'Books notable for illustrations', 'father': '09', 'value':71}
+,{ 'name': '097', 'title': 'Books notable for ownership or origin', 'father': '09', 'value':3}
+,{ 'name': '098', 'title': 'Prohibited works, forgeries & hoaxes', 'father': '09', 'value':117}
+,{ 'name': '099', 'title': 'Books notable for format', 'father': '09', 'value':12}
+,{ 'name': '100', 'title': 'Philosophy & psychology', 'father': '10', 'value':8661}
+,{ 'name': '101', 'title': 'Theory of philosophy', 'father': '10', 'value':175}
+,{ 'name': '102', 'title': 'Miscellany', 'father': '10', 'value':26}
+,{ 'name': '103', 'title': 'Dictionaries & encyclopedias', 'father': '10', 'value':98}
+,{ 'name': '104', 'title': '[Unassigned]', 'father': '10', 'value':4}
+,{ 'name': '105', 'title': 'Serial publications', 'father': '10', 'value':58}
+,{ 'name': '106', 'title': 'Organizations & management', 'father': '10', 'value':6}
+,{ 'name': '107', 'title': 'Education, research & related topics', 'father': '10', 'value':68}
+,{ 'name': '108', 'title': 'Kinds of persons treatment', 'father': '10', 'value':64}
+,{ 'name': '109', 'title': 'Historical & collected persons treatment', 'father': '10', 'value':196}
+,{ 'name': '110', 'title': 'Metaphysics', 'father': '11', 'value':957}
+,{ 'name': '111', 'title': 'Ontology', 'father': '11', 'value':1991}
+,{ 'name': '112', 'title': '[Unassigned]', 'father': '11', 'value':40}
+,{ 'name': '113', 'title': 'Cosmology', 'father': '11', 'value':567}
+,{ 'name': '114', 'title': 'Space', 'father': '11', 'value':48}
+,{ 'name': '115', 'title': 'Time', 'father': '11', 'value':436}
+,{ 'name': '116', 'title': 'Change', 'father': '11', 'value':102}
+,{ 'name': '117', 'title': 'Structure', 'father': '11', 'value':59}
+,{ 'name': '118', 'title': 'Force & energy', 'father': '11', 'value':3}
+,{ 'name': '119', 'title': 'Number & quantity', 'father': '11', 'value':10}
+,{ 'name': '120', 'title': 'Epistemology, causation & humankind', 'father': '12', 'value':31}
+,{ 'name': '121', 'title': 'Epistemology', 'father': '12', 'value':0}
+,{ 'name': '122', 'title': 'Causation', 'father': '12', 'value':196}
+,{ 'name': '123', 'title': 'Determinism & indeterminism', 'father': '12', 'value':466}
+,{ 'name': '124', 'title': 'Teleology', 'father': '12', 'value':57}
+,{ 'name': '125', 'title': '[Unassigned]', 'father': '12', 'value':10}
+,{ 'name': '126', 'title': 'The self', 'father': '12', 'value':801}
+,{ 'name': '127', 'title': 'The unconscious & the subconscious', 'father': '12', 'value':13}
+,{ 'name': '128', 'title': 'Humankind', 'father': '12', 'value':3667}
+,{ 'name': '129', 'title': 'Origin & destiny of individual souls', 'father': '12', 'value':162}
+,{ 'name': '130', 'title': 'Parapsychology & occultism', 'father': '13', 'value':300}
+,{ 'name': '131', 'title': 'Parapsychological & occult methods', 'father': '13', 'value':762}
+,{ 'name': '132', 'title': '[Unassigned]', 'father': '13', 'value':10}
+,{ 'name': '133', 'title': 'Specific topics in parapsychology & occultism', 'father': '13', 'value':15645}
+,{ 'name': '134', 'title': '[Unassigned]', 'father': '13', 'value':3}
+,{ 'name': '135', 'title': 'Dreams & mysteries', 'father': '13', 'value':442}
+,{ 'name': '136', 'title': '[Unassigned]', 'father': '13', 'value':13}
+,{ 'name': '137', 'title': 'Divinatory graphology', 'father': '13', 'value':60}
+,{ 'name': '138', 'title': 'Physiognomy', 'father': '13', 'value':0}
+,{ 'name': '139', 'title': 'Phrenology', 'father': '13', 'value':18}
+,{ 'name': '140', 'title': 'Specific philosophical schools', 'father': '14', 'value':57}
+,{ 'name': '141', 'title': 'Idealism & related systems', 'father': '14', 'value':246}
+,{ 'name': '142', 'title': 'Critical philosophy', 'father': '14', 'value':633}
+,{ 'name': '143', 'title': 'Bergsonism & intuitionism', 'father': '14', 'value':5}
+,{ 'name': '144', 'title': 'Humanism & related systems', 'father': '14', 'value':0}
+,{ 'name': '145', 'title': 'Sensationalism', 'father': '14', 'value':0}
+,{ 'name': '146', 'title': 'Naturalism & related systems', 'father': '14', 'value':397}
+,{ 'name': '147', 'title': 'Pantheism & related systems', 'father': '14', 'value':165}
+,{ 'name': '148', 'title': 'Eclecticism, liberalism & traditionalism', 'father': '14', 'value':30}
+,{ 'name': '149', 'title': 'Other philosophical systems', 'father': '14', 'value':1338}
+,{ 'name': '150', 'title': 'Psychology', 'father': '15', 'value':0}
+,{ 'name': '151', 'title': '[Unassigned]', 'father': '15', 'value':2}
+,{ 'name': '152', 'title': 'Perception, movement, emotions & drives', 'father': '15', 'value':0}
+,{ 'name': '153', 'title': 'Mental processes & intelligence', 'father': '15', 'value':0}
+,{ 'name': '154', 'title': 'Subconscious & altered states', 'father': '15', 'value':0}
+,{ 'name': '155', 'title': 'Differential & developmental psychology', 'father': '15', 'value':0}
+,{ 'name': '156', 'title': 'Comparative psychology', 'father': '15', 'value':442}
+,{ 'name': '157', 'title': '[Unassigned]', 'father': '15', 'value':0}
+,{ 'name': '158', 'title': 'Applied psychology', 'father': '15', 'value':0}
+,{ 'name': '159', 'title': '[Unassigned]', 'father': '15', 'value':0}
+,{ 'name': '160', 'title': 'Logic', 'father': '16', 'value':1702}
+,{ 'name': '161', 'title': 'Induction', 'father': '16', 'value':85}
+,{ 'name': '162', 'title': 'Deduction', 'father': '16', 'value':15}
+,{ 'name': '163', 'title': '[Unassigned]', 'father': '16', 'value':1}
+,{ 'name': '164', 'title': '[Unassigned]', 'father': '16', 'value':18}
+,{ 'name': '165', 'title': 'Fallacies & sources of error', 'father': '16', 'value':117}
+,{ 'name': '166', 'title': 'Syllogisms', 'father': '16', 'value':18}
+,{ 'name': '167', 'title': 'Hypotheses', 'father': '16', 'value':4}
+,{ 'name': '168', 'title': 'Argument & persuasion', 'father': '16', 'value':134}
+,{ 'name': '169', 'title': 'Analogy', 'father': '16', 'value':26}
+,{ 'name': '170', 'title': 'Ethics', 'father': '17', 'value':3570}
+,{ 'name': '171', 'title': 'Ethical systems', 'father': '17', 'value':1003}
+,{ 'name': '172', 'title': 'Political ethics', 'father': '17', 'value':1185}
+,{ 'name': '173', 'title': 'Ethics of family relationships', 'father': '17', 'value':48}
+,{ 'name': '174', 'title': 'Occupational ethics', 'father': '17', 'value':4817}
+,{ 'name': '175', 'title': 'Ethics of recreation & leisure', 'father': '17', 'value':165}
+,{ 'name': '176', 'title': 'Ethics of sex & reproduction', 'father': '17', 'value':324}
+,{ 'name': '177', 'title': 'Ethics of social relations', 'father': '17', 'value':418}
+,{ 'name': '178', 'title': 'Ethics of consumption', 'father': '17', 'value':308}
+,{ 'name': '179', 'title': 'Other ethical norms', 'father': '17', 'value':2227}
+,{ 'name': '180', 'title': 'Ancient, medieval & eastern philosophy', 'father': '18', 'value':449}
+,{ 'name': '181', 'title': 'Eastern philosophy', 'father': '18', 'value':2603}
+,{ 'name': '182', 'title': 'Pre-Socratic Greek philosophies', 'father': '18', 'value':209}
+,{ 'name': '183', 'title': 'Socratic & related philosophies', 'father': '18', 'value':213}
+,{ 'name': '184', 'title': 'Platonic philosophy', 'father': '18', 'value':809}
+,{ 'name': '185', 'title': 'Aristotelian philosophy', 'father': '18', 'value':285}
+,{ 'name': '186', 'title': 'Skeptic & Neoplatonic philosophies', 'father': '18', 'value':259}
+,{ 'name': '187', 'title': 'Epicurean philosophy', 'father': '18', 'value':69}
+,{ 'name': '188', 'title': 'Stoic philosophy', 'father': '18', 'value':157}
+,{ 'name': '189', 'title': 'Medieval western philosophy', 'father': '18', 'value':556}
+,{ 'name': '190', 'title': 'Modern western philosophy', 'father': '19', 'value':1358}
+,{ 'name': '191', 'title': 'Philosophy of United States & Canada', 'father': '19', 'value':1154}
+,{ 'name': '192', 'title': 'Philosophy of British Isles', 'father': '19', 'value':2511}
+,{ 'name': '193', 'title': 'Philosophy of Germany & Austria', 'father': '19', 'value':3477}
+,{ 'name': '194', 'title': 'Philosophy of France', 'father': '19', 'value':2577}
+,{ 'name': '195', 'title': 'Philosophy of Italy', 'father': '19', 'value':310}
+,{ 'name': '196', 'title': 'Philosophy of Spain & Portugal', 'father': '19', 'value':126}
+,{ 'name': '197', 'title': 'Philosophy of former Soviet Union', 'father': '19', 'value':225}
+,{ 'name': '198', 'title': 'Philosophy of Scandinavia', 'father': '19', 'value':347}
+,{ 'name': '199', 'title': 'Philosophy in other geographic areas', 'father': '19', 'value':645}
+,{ 'name': '200', 'title': 'Religion', 'father': '20', 'value':12058}
+,{ 'name': '201', 'title': 'Religious mythology & social theology', 'father': '20', 'value':1588}
+,{ 'name': '202', 'title': 'Doctrines', 'father': '20', 'value':589}
+,{ 'name': '203', 'title': 'Public worship & other practices', 'father': '20', 'value':409}
+,{ 'name': '204', 'title': 'Religious experience, life & practice', 'father': '20', 'value':1013}
+,{ 'name': '205', 'title': 'Religious ethics', 'father': '20', 'value':205}
+,{ 'name': '206', 'title': 'Leaders & organization', 'father': '20', 'value':64}
+,{ 'name': '207', 'title': 'Missions & religious education', 'father': '20', 'value':508}
+,{ 'name': '208', 'title': 'Sources', 'father': '20', 'value':87}
+,{ 'name': '209', 'title': 'Sects & reform movements', 'father': '20', 'value':342}
+,{ 'name': '210', 'title': 'Philosophy & theory of religion', 'father': '21', 'value':775}
+,{ 'name': '211', 'title': 'Concepts of God', 'father': '21', 'value':790}
+,{ 'name': '212', 'title': 'Existence, knowability & attributes of God', 'father': '21', 'value':396}
+,{ 'name': '213', 'title': 'Creation', 'father': '21', 'value':117}
+,{ 'name': '214', 'title': 'Theodicy', 'father': '21', 'value':54}
+,{ 'name': '215', 'title': 'Science & religion', 'father': '21', 'value':498}
+,{ 'name': '216', 'title': '[Unassigned]', 'father': '21', 'value':5}
+,{ 'name': '217', 'title': '[Unassigned]', 'father': '21', 'value':1}
+,{ 'name': '218', 'title': 'Humankind', 'father': '21', 'value':21}
+,{ 'name': '219', 'title': '[Unassigned]', 'father': '21', 'value':2}
+,{ 'name': '220', 'title': 'Bible', 'father': '22', 'value':0}
+,{ 'name': '221', 'title': 'Old Testament (Tanakh)', 'father': '22', 'value':0}
+,{ 'name': '222', 'title': 'Historical books of Old Testament', 'father': '22', 'value':0}
+,{ 'name': '223', 'title': 'Poetic books of Old Testament', 'father': '22', 'value':0}
+,{ 'name': '224', 'title': 'Prophetic books of Old Testament', 'father': '22', 'value':0}
+,{ 'name': '225', 'title': 'New Testament', 'father': '22', 'value':0}
+,{ 'name': '226', 'title': 'Gospels & Acts', 'father': '22', 'value':0}
+,{ 'name': '227', 'title': 'Epistles', 'father': '22', 'value':0}
+,{ 'name': '228', 'title': 'Revelation (Apocalypse)', 'father': '22', 'value':519}
+,{ 'name': '229', 'title': 'Apocrypha & pseudepigrapha', 'father': '22', 'value':0}
+,{ 'name': '230', 'title': 'Christianity & Christian theology', 'father': '23', 'value':8768}
+,{ 'name': '231', 'title': 'God', 'father': '23', 'value':3642}
+,{ 'name': '232', 'title': 'Jesus Christ & his family', 'father': '23', 'value':6103}
+,{ 'name': '233', 'title': 'Humankind', 'father': '23', 'value':733}
+,{ 'name': '234', 'title': 'Salvation & grace', 'father': '23', 'value':2588}
+,{ 'name': '235', 'title': 'Spiritual beings', 'father': '23', 'value':490}
+,{ 'name': '236', 'title': 'Eschatology', 'father': '23', 'value':1082}
+,{ 'name': '237', 'title': '[Unassigned]', 'father': '23', 'value':1}
+,{ 'name': '238', 'title': 'Creeds & catechisms', 'father': '23', 'value':522}
+,{ 'name': '239', 'title': 'Apologetics & polemics', 'father': '23', 'value':404}
+,{ 'name': '240', 'title': 'Christian moral & devotional theology', 'father': '24', 'value':0}
+,{ 'name': '241', 'title': 'Christian ethics', 'father': '24', 'value':3014}
+,{ 'name': '242', 'title': 'Devotional literature', 'father': '24', 'value':6054}
+,{ 'name': '243', 'title': 'Evangelistic writings for individuals', 'father': '24', 'value':75}
+,{ 'name': '244', 'title': '[Unassigned]', 'father': '24', 'value':3}
+,{ 'name': '245', 'title': '[Unassigned]', 'father': '24', 'value':149}
+,{ 'name': '246', 'title': 'Use of art in Christianity', 'father': '24', 'value':436}
+,{ 'name': '247', 'title': 'Church furnishings & articles', 'father': '24', 'value':107}
+,{ 'name': '248', 'title': 'Christian experience, practice & life', 'father': '24', 'value':14108}
+,{ 'name': '249', 'title': 'Christian observances in family life', 'father': '24', 'value':140}
+,{ 'name': '250', 'title': 'Christian orders & local church', 'father': '25', 'value':145}
+,{ 'name': '251', 'title': 'Preaching', 'father': '25', 'value':723}
+,{ 'name': '252', 'title': 'Texts of sermons', 'father': '25', 'value':1873}
+,{ 'name': '253', 'title': 'Pastoral office & work', 'father': '25', 'value':1555}
+,{ 'name': '254', 'title': 'Parish administration', 'father': '25', 'value':782}
+,{ 'name': '255', 'title': 'Religious congregations & orders', 'father': '25', 'value':830}
+,{ 'name': '256', 'title': '[Unassigned]', 'father': '25', 'value':1}
+,{ 'name': '257', 'title': '[Unassigned]', 'father': '25', 'value':1}
+,{ 'name': '258', 'title': '[Unassigned]', 'father': '25', 'value':12}
+,{ 'name': '259', 'title': 'Pastoral care of families & kinds of persons', 'father': '25', 'value':711}
+,{ 'name': '260', 'title': 'Social & ecclesiastical theology', 'father': '26', 'value':514}
+,{ 'name': '261', 'title': 'Social theology', 'father': '26', 'value':8860}
+,{ 'name': '262', 'title': 'Ecclesiology', 'father': '26', 'value':4139}
+,{ 'name': '263', 'title': 'Days, times & places of observance', 'father': '26', 'value':1040}
+,{ 'name': '264', 'title': 'Public worship', 'father': '26', 'value':5211}
+,{ 'name': '265', 'title': 'Sacraments, other rites & acts', 'father': '26', 'value':1301}
+,{ 'name': '266', 'title': 'Missions', 'father': '26', 'value':3652}
+,{ 'name': '267', 'title': 'Associations for religious work', 'father': '26', 'value':1116}
+,{ 'name': '268', 'title': 'Religious education', 'father': '26', 'value':1606}
+,{ 'name': '269', 'title': 'Spiritual renewal', 'father': '26', 'value':1474}
+,{ 'name': '270', 'title': 'History of Christianity & Christian church', 'father': '27', 'value':4537}
+,{ 'name': '271', 'title': 'Religious orders in church history', 'father': '27', 'value':2910}
+,{ 'name': '272', 'title': 'Persecutions in church history', 'father': '27', 'value':596}
+,{ 'name': '273', 'title': 'Doctrinal controversies & heresies', 'father': '27', 'value':436}
+,{ 'name': '274', 'title': 'History of Christianity in Europe', 'father': '27', 'value':2290}
+,{ 'name': '275', 'title': 'History of Christianity in Asia', 'father': '27', 'value':576}
+,{ 'name': '276', 'title': 'History of Christianity in Africa', 'father': '27', 'value':395}
+,{ 'name': '277', 'title': 'History of Christianity in North America', 'father': '27', 'value':640}
+,{ 'name': '278', 'title': 'History of Christianity in South America', 'father': '27', 'value':65}
+,{ 'name': '279', 'title': 'History of Christianity in other areas', 'father': '27', 'value':68}
+,{ 'name': '280', 'title': 'Christian denominations & sects', 'father': '28', 'value':913}
+,{ 'name': '281', 'title': 'Early church & Eastern churches', 'father': '28', 'value':627}
+,{ 'name': '282', 'title': 'Roman Catholic Church', 'father': '28', 'value':5499}
+,{ 'name': '283', 'title': 'Anglican churches', 'father': '28', 'value':3102}
+,{ 'name': '284', 'title': 'Protestants of Continental origin', 'father': '28', 'value':820}
+,{ 'name': '285', 'title': 'Presbyterian, Reformed & Congregational', 'father': '28', 'value':1738}
+,{ 'name': '286', 'title': 'Baptist, Disciples of Christ & Adventist', 'father': '28', 'value':861}
+,{ 'name': '287', 'title': 'Methodist & related churches', 'father': '28', 'value':1558}
+,{ 'name': '288', 'title': '[Unassigned]', 'father': '28', 'value':94}
+,{ 'name': '289', 'title': 'Other denominations & sects', 'father': '28', 'value':2162}
+,{ 'name': '290', 'title': 'Other religions', 'father': '29', 'value':71}
+,{ 'name': '291', 'title': '[Unassigned]', 'father': '29', 'value':5060}
+,{ 'name': '292', 'title': 'Greek & Roman religion', 'father': '29', 'value':1030}
+,{ 'name': '293', 'title': 'Germanic religion', 'father': '29', 'value':194}
+,{ 'name': '294', 'title': 'Religions of Indic origin', 'father': '29', 'value':9338}
+,{ 'name': '295', 'title': 'Zoroastrianism', 'father': '29', 'value':98}
+,{ 'name': '296', 'title': 'Judaism', 'father': '29', 'value':4991}
+,{ 'name': '297', 'title': 'Islam, Babism & Bahai Faith', 'father': '29', 'value':7006}
+,{ 'name': '298', 'title': '(Optional number)', 'father': '29', 'value':2}
+,{ 'name': '299', 'title': 'Religions not provided for elsewhere', 'father': '29', 'value':4509}
+,{ 'name': '300', 'title': 'Social sciences', 'father': '30', 'value':0}
+,{ 'name': '301', 'title': 'Sociology & anthropology', 'father': '30', 'value':0}
+,{ 'name': '302', 'title': 'Social interaction', 'father': '30', 'value':0}
+,{ 'name': '303', 'title': 'Social processes', 'father': '30', 'value':0}
+,{ 'name': '304', 'title': 'Factors affecting social behavior', 'father': '30', 'value':0}
+,{ 'name': '305', 'title': 'Social groups', 'father': '30', 'value':0}
+,{ 'name': '306', 'title': 'Culture & institutions', 'father': '30', 'value':0}
+,{ 'name': '307', 'title': 'Communities', 'father': '30', 'value':0}
+,{ 'name': '308', 'title': '[Unassigned]', 'father': '30', 'value':14}
+,{ 'name': '309', 'title': '[Unassigned]', 'father': '30', 'value':3531}
+,{ 'name': '310', 'title': 'Collections of general statistics', 'father': '31', 'value':133}
+,{ 'name': '311', 'title': '[Unassigned]', 'father': '31', 'value':28}
+,{ 'name': '312', 'title': '[Unassigned]', 'father': '31', 'value':1213}
+,{ 'name': '313', 'title': '[Unassigned]', 'father': '31', 'value':4}
+,{ 'name': '314', 'title': 'General statistics of Europe', 'father': '31', 'value':536}
+,{ 'name': '315', 'title': 'General statistics of Asia', 'father': '31', 'value':51}
+,{ 'name': '316', 'title': 'General statistics of Africa', 'father': '31', 'value':58}
+,{ 'name': '317', 'title': 'General statistics of North America', 'father': '31', 'value':74}
+,{ 'name': '318', 'title': 'General statistics of South America', 'father': '31', 'value':15}
+,{ 'name': '319', 'title': 'General statistics of other areas', 'father': '31', 'value':3}
+,{ 'name': '320', 'title': 'Political science', 'father': '32', 'value':55446}
+,{ 'name': '321', 'title': 'Systems of governments & states', 'father': '32', 'value':4089}
+,{ 'name': '322', 'title': 'Relation of state to organized groups', 'father': '32', 'value':5150}
+,{ 'name': '323', 'title': 'Civil & political rights', 'father': '32', 'value':9940}
+,{ 'name': '324', 'title': 'The political process', 'father': '32', 'value':11755}
+,{ 'name': '325', 'title': 'International migration & colonization', 'father': '32', 'value':4862}
+,{ 'name': '326', 'title': 'Slavery & emancipation', 'father': '32', 'value':403}
+,{ 'name': '327', 'title': 'International relations', 'father': '32', 'value':25498}
+,{ 'name': '328', 'title': 'The legislative process', 'father': '32', 'value':3950}
+,{ 'name': '329', 'title': '[Unassigned]', 'father': '32', 'value':1086}
+,{ 'name': '330', 'title': 'Economics', 'father': '33', 'value':61600}
+,{ 'name': '331', 'title': 'Labor economics', 'father': '33', 'value':45532}
+,{ 'name': '332', 'title': 'Financial economics', 'father': '33', 'value':44749}
+,{ 'name': '333', 'title': 'Economics of land & energy', 'father': '33', 'value':36475}
+,{ 'name': '334', 'title': 'Cooperatives', 'father': '33', 'value':1602}
+,{ 'name': '335', 'title': 'Socialism & related systems', 'father': '33', 'value':5832}
+,{ 'name': '336', 'title': 'Public finance', 'father': '33', 'value':20419}
+,{ 'name': '337', 'title': 'International economics', 'father': '33', 'value':4954}
+,{ 'name': '338', 'title': 'Production', 'father': '33', 'value':87721}
+,{ 'name': '339', 'title': 'Macroeconomics & related topics', 'father': '33', 'value':7087}
+,{ 'name': '340', 'title': 'Law', 'father': '34', 'value':21047}
+,{ 'name': '341', 'title': 'Law of nations', 'father': '34', 'value':19366}
+,{ 'name': '342', 'title': 'Constitutional & administrative law', 'father': '34', 'value':8552}
+,{ 'name': '343', 'title': 'Military, tax, trade & industrial law', 'father': '34', 'value':9438}
+,{ 'name': '344', 'title': 'Labor, social, education & cultural law', 'father': '34', 'value':25116}
+,{ 'name': '345', 'title': 'Criminal law', 'father': '34', 'value':7003}
+,{ 'name': '346', 'title': 'Private law', 'father': '34', 'value':20244}
+,{ 'name': '347', 'title': 'Civil procedure & courts', 'father': '34', 'value':8963}
+,{ 'name': '348', 'title': 'Laws, regulations & cases', 'father': '34', 'value':1283}
+,{ 'name': '349', 'title': 'Law of specific jurisdictions & areas', 'father': '34', 'value':1839}
+,{ 'name': '350', 'title': 'Public administration & military science', 'father': '35', 'value':834}
+,{ 'name': '351', 'title': 'Public administration', 'father': '35', 'value':27884}
+,{ 'name': '352', 'title': 'General considerations of public administration', 'father': '35', 'value':8176}
+,{ 'name': '353', 'title': 'Specific fields of public administration', 'father': '35', 'value':3232}
+,{ 'name': '354', 'title': 'Administration of economy & environment', 'father': '35', 'value':5111}
+,{ 'name': '355', 'title': 'Military science', 'father': '35', 'value':18841}
+,{ 'name': '356', 'title': 'Infantry forces & warfare', 'father': '35', 'value':1420}
+,{ 'name': '357', 'title': 'Mounted forces & warfare', 'father': '35', 'value':399}
+,{ 'name': '358', 'title': 'Air & other specialized forces', 'father': '35', 'value':3682}
+,{ 'name': '359', 'title': 'Sea forces & warfare', 'father': '35', 'value':3778}
+,{ 'name': '360', 'title': 'Social problems & services; associations', 'father': '36', 'value':54}
+,{ 'name': '361', 'title': 'Social problems & social welfare in general', 'father': '36', 'value':45545}
+,{ 'name': '362', 'title': 'Social welfare problems & services', 'father': '36', 'value':78085}
+,{ 'name': '363', 'title': 'Other social problems & services', 'father': '36', 'value':77940}
+,{ 'name': '364', 'title': 'Criminology', 'father': '36', 'value':20575}
+,{ 'name': '365', 'title': 'Penal & related institutions', 'father': '36', 'value':17211}
+,{ 'name': '366', 'title': 'Associations', 'father': '36', 'value':1451}
+,{ 'name': '367', 'title': 'General clubs', 'father': '36', 'value':355}
+,{ 'name': '368', 'title': 'Insurance', 'father': '36', 'value':4653}
+,{ 'name': '369', 'title': 'Miscellaneous kinds of associations', 'father': '36', 'value':1519}
+,{ 'name': '370', 'title': 'Education', 'father': '37', 'value':0}
+,{ 'name': '371', 'title': 'Schools & their activities; special education', 'father': '37', 'value':27150}
+,{ 'name': '372', 'title': 'Elementary education', 'father': '37', 'value':21750}
+,{ 'name': '373', 'title': 'Secondary education', 'father': '37', 'value':5777}
+,{ 'name': '374', 'title': 'Adult education', 'father': '37', 'value':0}
+,{ 'name': '375', 'title': 'Curricula', 'father': '37', 'value':0}
+,{ 'name': '376', 'title': '[Unassigned]', 'father': '37', 'value':0}
+,{ 'name': '377', 'title': '[Unassigned]', 'father': '37', 'value':0}
+,{ 'name': '378', 'title': 'Higher education', 'father': '37', 'value':15167}
+,{ 'name': '379', 'title': 'Public policy issues in education', 'father': '37', 'value':6610}
+,{ 'name': '380', 'title': 'Commerce, communications & transportation', 'father': '38', 'value':5365}
+,{ 'name': '381', 'title': 'Commerce', 'father': '38', 'value':23049}
+,{ 'name': '382', 'title': 'International commerce', 'father': '38', 'value':15238}
+,{ 'name': '383', 'title': 'Postal communication', 'father': '38', 'value':1301}
+,{ 'name': '384', 'title': 'Communications; telecommunication', 'father': '38', 'value':6167}
+,{ 'name': '385', 'title': 'Railroad transportation', 'father': '38', 'value':10507}
+,{ 'name': '386', 'title': 'Inland waterway & ferry transportation', 'father': '38', 'value':1567}
+,{ 'name': '387', 'title': 'Water, air & space transportation', 'father': '38', 'value':8242}
+,{ 'name': '388', 'title': 'Transportation; ground transportation', 'father': '38', 'value':8445}
+,{ 'name': '389', 'title': 'Metrology & standardization', 'father': '38', 'value':311}
+,{ 'name': '390', 'title': 'Customs, etiquette & folklore', 'father': '39', 'value':440}
+,{ 'name': '391', 'title': 'Costume & personal appearance', 'father': '39', 'value':3461}
+,{ 'name': '392', 'title': 'Customs of life cycle & domestic life', 'father': '39', 'value':1071}
+,{ 'name': '393', 'title': 'Death customs', 'father': '39', 'value':678}
+,{ 'name': '394', 'title': 'General customs', 'father': '39', 'value':3926}
+,{ 'name': '395', 'title': 'Etiquette (Manners)', 'father': '39', 'value':1297}
+,{ 'name': '396', 'title': '[Unassigned]', 'father': '39', 'value':25}
+,{ 'name': '397', 'title': '[Unassigned]', 'father': '39', 'value':8}
+,{ 'name': '398', 'title': 'Folklore', 'father': '39', 'value':15919}
+,{ 'name': '399', 'title': 'Customs of war & diplomacy', 'father': '39', 'value':26}
+,{ 'name': '400', 'title': 'Language', 'father': '40', 'value':447}
+,{ 'name': '401', 'title': 'Philosophy & theory', 'father': '40', 'value':4276}
+,{ 'name': '402', 'title': 'Miscellany', 'father': '40', 'value':27}
+,{ 'name': '403', 'title': 'Dictionaries & encyclopedias', 'father': '40', 'value':20}
+,{ 'name': '404', 'title': 'Special topics', 'father': '40', 'value':245}
+,{ 'name': '405', 'title': 'Serial publications', 'father': '40', 'value':16}
+,{ 'name': '406', 'title': 'Organizations & management', 'father': '40', 'value':4}
+,{ 'name': '407', 'title': 'Education, research & related topics', 'father': '40', 'value':561}
+,{ 'name': '408', 'title': 'Kinds of persons treatment', 'father': '40', 'value':87}
+,{ 'name': '409', 'title': 'Geographic & persons treatment', 'father': '40', 'value':283}
+,{ 'name': '410', 'title': 'Linguistics', 'father': '41', 'value':6362}
+,{ 'name': '411', 'title': 'Writing systems', 'father': '41', 'value':277}
+,{ 'name': '412', 'title': 'Etymology', 'father': '41', 'value':395}
+,{ 'name': '413', 'title': 'Dictionaries', 'father': '41', 'value':278}
+,{ 'name': '414', 'title': 'Phonology & phonetics', 'father': '41', 'value':751}
+,{ 'name': '415', 'title': 'Grammar', 'father': '41', 'value':2615}
+,{ 'name': '416', 'title': '[Unassigned]', 'father': '41', 'value':3}
+,{ 'name': '417', 'title': 'Dialectology & historical linguistics', 'father': '41', 'value':549}
+,{ 'name': '418', 'title': 'Standard usage & applied linguistics', 'father': '41', 'value':3252}
+,{ 'name': '419', 'title': 'Sign languages', 'father': '41', 'value':324}
+,{ 'name': '420', 'title': 'English & Old English', 'father': '42', 'value':1722}
+,{ 'name': '421', 'title': 'English writing system & phonology', 'father': '42', 'value':1856}
+,{ 'name': '422', 'title': 'English etymology', 'father': '42', 'value':511}
+,{ 'name': '423', 'title': 'English dictionaries', 'father': '42', 'value':3430}
+,{ 'name': '424', 'title': '[Unassigned]', 'father': '42', 'value':44}
+,{ 'name': '425', 'title': 'English grammar', 'father': '42', 'value':1246}
+,{ 'name': '426', 'title': '[Unassigned]', 'father': '42', 'value':6}
+,{ 'name': '427', 'title': 'English language variations', 'father': '42', 'value':2206}
+,{ 'name': '428', 'title': 'Standard English usage', 'father': '42', 'value':55406}
+,{ 'name': '429', 'title': 'Old English (Anglo-Saxon)', 'father': '42', 'value':207}
+,{ 'name': '430', 'title': 'Germanic languages; German', 'father': '43', 'value':355}
+,{ 'name': '431', 'title': 'German writing systems & phonology', 'father': '43', 'value':66}
+,{ 'name': '432', 'title': 'German etymology', 'father': '43', 'value':43}
+,{ 'name': '433', 'title': 'German dictionaries', 'father': '43', 'value':515}
+,{ 'name': '434', 'title': '[Unassigned]', 'father': '43', 'value':1}
+,{ 'name': '435', 'title': 'German grammar', 'father': '43', 'value':326}
+,{ 'name': '436', 'title': '[Unassigned]', 'father': '43', 'value':3}
+,{ 'name': '437', 'title': 'German language variations', 'father': '43', 'value':315}
+,{ 'name': '438', 'title': 'Standard German usage', 'father': '43', 'value':2498}
+,{ 'name': '439', 'title': 'Other Germanic languages', 'father': '43', 'value':775}
+,{ 'name': '440', 'title': 'Romance languages; French', 'father': '44', 'value':424}
+,{ 'name': '441', 'title': 'French writing systems & phonology', 'father': '44', 'value':73}
+,{ 'name': '442', 'title': 'French etymology', 'father': '44', 'value':31}
+,{ 'name': '443', 'title': 'French dictionaries', 'father': '44', 'value':624}
+,{ 'name': '444', 'title': '[Unassigned]', 'father': '44', 'value':1}
+,{ 'name': '445', 'title': 'French grammar', 'father': '44', 'value':340}
+,{ 'name': '446', 'title': '[Unassigned]', 'father': '44', 'value':0}
+,{ 'name': '447', 'title': 'French language variations', 'father': '44', 'value':243}
+,{ 'name': '448', 'title': 'Standard French usage', 'father': '44', 'value':5047}
+,{ 'name': '449', 'title': 'Occitan & Catalan', 'father': '44', 'value':136}
+,{ 'name': '450', 'title': 'Italian, Romanian & related languages', 'father': '45', 'value':61}
+,{ 'name': '451', 'title': 'Italian writing systems & phonology', 'father': '45', 'value':17}
+,{ 'name': '452', 'title': 'Italian etymology', 'father': '45', 'value':17}
+,{ 'name': '453', 'title': 'Italian dictionaries', 'father': '45', 'value':250}
+,{ 'name': '454', 'title': '[Unassigned]', 'father': '45', 'value':0}
+,{ 'name': '455', 'title': 'Italian grammar', 'father': '45', 'value':78}
+,{ 'name': '456', 'title': '[Unassigned]', 'father': '45', 'value':1}
+,{ 'name': '457', 'title': 'Italian language variations', 'father': '45', 'value':129}
+,{ 'name': '458', 'title': 'Standard Italian usage', 'father': '45', 'value':0}
+,{ 'name': '459', 'title': 'Romanian & related languages', 'father': '45', 'value':102}
+,{ 'name': '460', 'title': 'Spanish & Portuguese languages', 'father': '46', 'value':144}
+,{ 'name': '461', 'title': 'Spanish writing systems & phonology', 'father': '46', 'value':38}
+,{ 'name': '462', 'title': 'Spanish etymology', 'father': '46', 'value':21}
+,{ 'name': '463', 'title': 'Spanish dictionaries', 'father': '46', 'value':499}
+,{ 'name': '464', 'title': '[Unassigned]', 'father': '46', 'value':0}
+,{ 'name': '465', 'title': 'Spanish grammar', 'father': '46', 'value':0}
+,{ 'name': '466', 'title': '[Unassigned]', 'father': '46', 'value':0}
+,{ 'name': '467', 'title': 'Spanish language variations', 'father': '46', 'value':260}
+,{ 'name': '468', 'title': 'Standard Spanish usage', 'father': '46', 'value':0}
+,{ 'name': '469', 'title': 'Portuguese', 'father': '46', 'value':0}
+,{ 'name': '470', 'title': 'Italic languages; Latin', 'father': '47', 'value':0}
+,{ 'name': '471', 'title': 'Classical Latin writing & phonology', 'father': '47', 'value':0}
+,{ 'name': '472', 'title': 'Classical Latin etymology', 'father': '47', 'value':0}
+,{ 'name': '473', 'title': 'Classical Latin dictionaries', 'father': '47', 'value':0}
+,{ 'name': '474', 'title': '[Unassigned]', 'father': '47', 'value':0}
+,{ 'name': '475', 'title': 'Classical Latin grammar', 'father': '47', 'value':0}
+,{ 'name': '476', 'title': '[Unassigned]', 'father': '47', 'value':0}
+,{ 'name': '477', 'title': 'Old, postclassical & Vulgar Latin', 'father': '47', 'value':0}
+,{ 'name': '478', 'title': 'Classical Latin usage', 'father': '47', 'value':0}
+,{ 'name': '479', 'title': 'Other Italic languages', 'father': '47', 'value':0}
+,{ 'name': '480', 'title': 'Hellenic languages; classical Greek', 'father': '48', 'value':0}
+,{ 'name': '481', 'title': 'Classical Greek writing & phonology', 'father': '48', 'value':0}
+,{ 'name': '482', 'title': 'Classical Greek etymology', 'father': '48', 'value':0}
+,{ 'name': '483', 'title': 'Classical Greek dictionaries', 'father': '48', 'value':0}
+,{ 'name': '484', 'title': '[Unassigned]', 'father': '48', 'value':0}
+,{ 'name': '485', 'title': 'Classical Greek grammar', 'father': '48', 'value':0}
+,{ 'name': '486', 'title': '[Unassigned]', 'father': '48', 'value':0}
+,{ 'name': '487', 'title': 'Preclassical & postclassical Greek', 'father': '48', 'value':0}
+,{ 'name': '488', 'title': 'Classical Greek usage', 'father': '48', 'value':0}
+,{ 'name': '489', 'title': 'Other Hellenic languages', 'father': '48', 'value':0}
+,{ 'name': '490', 'title': 'Other languages', 'father': '49', 'value':34}
+,{ 'name': '491', 'title': 'East Indo-European & Celtic languages', 'father': '49', 'value':6002}
+,{ 'name': '492', 'title': 'Afro-Asiatic languages; Semitic languages', 'father': '49', 'value':1387}
+,{ 'name': '493', 'title': 'Non-Semitic Afro-Asiatic languages', 'father': '49', 'value':450}
+,{ 'name': '494', 'title': 'Altaic, Uralic, Hyperborean & Dravidian', 'father': '49', 'value':638}
+,{ 'name': '495', 'title': 'Languages of East & Southeast Asia', 'father': '49', 'value':2421}
+,{ 'name': '496', 'title': 'African languages', 'father': '49', 'value':650}
+,{ 'name': '497', 'title': 'North American native languages', 'father': '49', 'value':614}
+,{ 'name': '498', 'title': 'South American native languages', 'father': '49', 'value':172}
+,{ 'name': '499', 'title': 'Austronesian & other languages', 'father': '49', 'value':973}
+,{ 'name': '500', 'title': 'Natural sciences & mathematics', 'father': '50', 'value':5746}
+,{ 'name': '501', 'title': 'Philosophy & theory', 'father': '50', 'value':2093}
+,{ 'name': '502', 'title': 'Miscellany', 'father': '50', 'value':1165}
+,{ 'name': '503', 'title': 'Dictionaries & encyclopedias', 'father': '50', 'value':383}
+,{ 'name': '504', 'title': '[Unassigned]', 'father': '50', 'value':20}
+,{ 'name': '505', 'title': 'Serial publications', 'father': '50', 'value':153}
+,{ 'name': '506', 'title': 'Organizations & management', 'father': '50', 'value':0}
+,{ 'name': '507', 'title': 'Education, research & related topics', 'father': '50', 'value':0}
+,{ 'name': '508', 'title': 'Natural history', 'father': '50', 'value':0}
+,{ 'name': '509', 'title': 'Historical, geographic & persons treatment', 'father': '50', 'value':2329}
+,{ 'name': '510', 'title': 'Mathematics', 'father': '51', 'value':23415}
+,{ 'name': '511', 'title': 'General principles of mathematics', 'father': '51', 'value':4632}
+,{ 'name': '512', 'title': 'Algebra', 'father': '51', 'value':7171}
+,{ 'name': '513', 'title': 'Arithmetic', 'father': '51', 'value':5096}
+,{ 'name': '514', 'title': 'Topology', 'father': '51', 'value':1429}
+,{ 'name': '515', 'title': 'Analysis', 'father': '51', 'value':10418}
+,{ 'name': '516', 'title': 'Geometry', 'father': '51', 'value':3991}
+,{ 'name': '517', 'title': '[Unassigned]', 'father': '51', 'value':208}
+,{ 'name': '518', 'title': 'Numerical analysis', 'father': '51', 'value':459}
+,{ 'name': '519', 'title': 'Probabilities & applied mathematics', 'father': '51', 'value':21575}
+,{ 'name': '520', 'title': 'Astronomy & allied sciences', 'father': '52', 'value':2852}
+,{ 'name': '521', 'title': 'Celestial mechanics', 'father': '52', 'value':323}
+,{ 'name': '522', 'title': 'Techniques, equipment & materials', 'father': '52', 'value':1069}
+,{ 'name': '523', 'title': 'Specific celestial bodies & phenomena', 'father': '52', 'value':8814}
+,{ 'name': '524', 'title': '[Unassigned]', 'father': '52', 'value':1}
+,{ 'name': '525', 'title': 'Earth (Astronomical geography)', 'father': '52', 'value':298}
+,{ 'name': '526', 'title': 'Mathematical geography', 'father': '52', 'value':3281}
+,{ 'name': '527', 'title': 'Celestial navigation', 'father': '52', 'value':147}
+,{ 'name': '528', 'title': 'Ephemerides', 'father': '52', 'value':176}
+,{ 'name': '529', 'title': 'Chronology', 'father': '52', 'value':775}
+,{ 'name': '530', 'title': 'Physics', 'father': '53', 'value':30130}
+,{ 'name': '531', 'title': 'Classical mechanics; solid mechanics', 'father': '53', 'value':3104}
+,{ 'name': '532', 'title': 'Fluid mechanics; liquid mechanics', 'father': '53', 'value':5827}
+,{ 'name': '533', 'title': 'Gas mechanics', 'father': '53', 'value':425}
+,{ 'name': '534', 'title': 'Sound & related vibrations', 'father': '53', 'value':2774}
+,{ 'name': '535', 'title': 'Light & infrared & ultraviolet phenomena', 'father': '53', 'value':5941}
+,{ 'name': '536', 'title': 'Heat', 'father': '53', 'value':3082}
+,{ 'name': '537', 'title': 'Electricity & electronics', 'father': '53', 'value':3460}
+,{ 'name': '538', 'title': 'Magnetism', 'father': '53', 'value':2164}
+,{ 'name': '539', 'title': 'Modern physics', 'father': '53', 'value':15218}
+,{ 'name': '540', 'title': 'Chemistry & allied sciences', 'father': '54', 'value':5527}
+,{ 'name': '541', 'title': 'Physical chemistry', 'father': '54', 'value':15454}
+,{ 'name': '542', 'title': 'Techniques, equipment & materials', 'father': '54', 'value':725}
+,{ 'name': '543', 'title': 'Analytical chemistry', 'father': '54', 'value':3472}
+,{ 'name': '544', 'title': '[Unassigned]', 'father': '54', 'value':318}
+,{ 'name': '545', 'title': '[Unassigned]', 'father': '54', 'value':441}
+,{ 'name': '546', 'title': 'Inorganic chemistry', 'father': '54', 'value':5763}
+,{ 'name': '547', 'title': 'Organic chemistry', 'father': '54', 'value':17742}
+,{ 'name': '548', 'title': 'Crystallography', 'father': '54', 'value':1318}
+,{ 'name': '549', 'title': 'Mineralogy', 'father': '54', 'value':6197}
+,{ 'name': '550', 'title': 'Earth sciences', 'father': '55', 'value':1800}
+,{ 'name': '551', 'title': 'Geology, hydrology & meteorology', 'father': '55', 'value':34891}
+,{ 'name': '552', 'title': 'Petrology', 'father': '55', 'value':6576}
+,{ 'name': '553', 'title': 'Economic geology', 'father': '55', 'value':5515}
+,{ 'name': '554', 'title': 'Earth sciences of Europe', 'father': '55', 'value':1000}
+,{ 'name': '555', 'title': 'Earth sciences of Asia', 'father': '55', 'value':136}
+,{ 'name': '556', 'title': 'Earth sciences of Africa', 'father': '55', 'value':78}
+,{ 'name': '557', 'title': 'Earth sciences of North America', 'father': '55', 'value':321}
+,{ 'name': '558', 'title': 'Earth sciences of South America', 'father': '55', 'value':19}
+,{ 'name': '559', 'title': 'Earth sciences of other areas', 'father': '55', 'value':257}
+,{ 'name': '560', 'title': 'Paleontology; paleozoology', 'father': '56', 'value':0}
+,{ 'name': '561', 'title': 'Paleobotany; fossil microorganisms', 'father': '56', 'value':0}
+,{ 'name': '562', 'title': 'Fossil invertebrates', 'father': '56', 'value':60}
+,{ 'name': '563', 'title': 'Fossil marine & seashore invertebrates', 'father': '56', 'value':0}
+,{ 'name': '564', 'title': 'Fossil mollusks & molluscoids', 'father': '56', 'value':0}
+,{ 'name': '565', 'title': 'Fossil arthropods', 'father': '56', 'value':0}
+,{ 'name': '566', 'title': 'Fossil chordates', 'father': '56', 'value':0}
+,{ 'name': '567', 'title': 'Fossil cold-blooded vertebrates; fossil fishes', 'father': '56', 'value':0}
+,{ 'name': '568', 'title': 'Fossil birds', 'father': '56', 'value':0}
+,{ 'name': '569', 'title': 'Fossil mammals', 'father': '56', 'value':0}
+,{ 'name': '570', 'title': 'Life sciences; biology', 'father': '57', 'value':2457}
+,{ 'name': '571', 'title': 'Physiology & related subjects', 'father': '57', 'value':18635}
+,{ 'name': '572', 'title': 'Biochemistry', 'father': '57', 'value':34204}
+,{ 'name': '573', 'title': 'Specific physiological systems in animals', 'father': '57', 'value':2321}
+,{ 'name': '574', 'title': '[Unassigned]', 'father': '57', 'value':14946}
+,{ 'name': '575', 'title': 'Specific parts of & systems in plants', 'father': '57', 'value':2114}
+,{ 'name': '576', 'title': 'Genetics & evolution', 'father': '57', 'value':14680}
+,{ 'name': '577', 'title': 'Ecology', 'father': '57', 'value':14917}
+,{ 'name': '578', 'title': 'Natural history of organisms', 'father': '57', 'value':1147}
+,{ 'name': '579', 'title': 'Microorganisms, fungi & algae', 'father': '57', 'value':8742}
+,{ 'name': '580', 'title': 'Plants (Botany)', 'father': '58', 'value':5444}
+,{ 'name': '581', 'title': 'Specific topics in natural history', 'father': '58', 'value':5690}
+,{ 'name': '582', 'title': 'Plants noted for characteristics & flowers', 'father': '58', 'value':2653}
+,{ 'name': '583', 'title': 'Dicotyledons', 'father': '58', 'value':1158}
+,{ 'name': '584', 'title': 'Monocotyledons', 'father': '58', 'value':724}
+,{ 'name': '585', 'title': 'Gymnosperms; conifers', 'father': '58', 'value':125}
+,{ 'name': '586', 'title': 'Seedless plants', 'father': '58', 'value':32}
+,{ 'name': '587', 'title': 'Vascular seedless plants', 'father': '58', 'value':165}
+,{ 'name': '588', 'title': 'Bryophytes', 'father': '58', 'value':190}
+,{ 'name': '589', 'title': '[Unassigned]', 'father': '58', 'value':1668}
+,{ 'name': '590', 'title': 'Animals (Zoology)', 'father': '59', 'value':7291}
+,{ 'name': '591', 'title': 'Specific topics in natural history', 'father': '59', 'value':8714}
+,{ 'name': '592', 'title': 'Invertebrates', 'father': '59', 'value':736}
+,{ 'name': '593', 'title': 'Marine & seashore invertebrates', 'father': '59', 'value':409}
+,{ 'name': '594', 'title': 'Mollusks & molluscoids', 'father': '59', 'value':790}
+,{ 'name': '595', 'title': 'Arthropods', 'father': '59', 'value':6588}
+,{ 'name': '596', 'title': 'Chordates', 'father': '59', 'value':1266}
+,{ 'name': '597', 'title': 'Cold-blooded vertebrates; fishes', 'father': '59', 'value':3658}
+,{ 'name': '598', 'title': 'Birds', 'father': '59', 'value':7898}
+,{ 'name': '599', 'title': 'Mammals', 'father': '59', 'value':10329}
+,{ 'name': '600', 'title': 'Technology', 'father': '60', 'value':969}
+,{ 'name': '601', 'title': 'Philosophy & theory', 'father': '60', 'value':245}
+,{ 'name': '602', 'title': 'Miscellany', 'father': '60', 'value':0}
+,{ 'name': '603', 'title': 'Dictionaries & encyclopedias', 'father': '60', 'value':151}
+,{ 'name': '604', 'title': 'Special topics', 'father': '60', 'value':1303}
+,{ 'name': '605', 'title': 'Serial publications', 'father': '60', 'value':0}
+,{ 'name': '606', 'title': 'Organizations', 'father': '60', 'value':56}
+,{ 'name': '607', 'title': 'Education, research & related topics', 'father': '60', 'value':1367}
+,{ 'name': '608', 'title': 'Inventions & patents', 'father': '60', 'value':0}
+,{ 'name': '609', 'title': 'Historical, geographic & persons treatment', 'father': '60', 'value':0}
+,{ 'name': '610', 'title': 'Medicine & health', 'father': '61', 'value':41458}
+,{ 'name': '611', 'title': 'Human anatomy, cytology & histology', 'father': '61', 'value':8216}
+,{ 'name': '612', 'title': 'Human physiology', 'father': '61', 'value':24225}
+,{ 'name': '613', 'title': 'Personal health & safety', 'father': '61', 'value':23378}
+,{ 'name': '614', 'title': 'Incidence & prevention of disease', 'father': '61', 'value':8062}
+,{ 'name': '615', 'title': 'Pharmacology & therapeutics', 'father': '61', 'value':32626}
+,{ 'name': '616', 'title': 'Diseases', 'father': '61', 'value':103245}
+,{ 'name': '617', 'title': 'Surgery & related medical specialties', 'father': '61', 'value':28196}
+,{ 'name': '618', 'title': 'Gynecology, obstetrics, pediatrics & geriatrics', 'father': '61', 'value':20670}
+,{ 'name': '619', 'title': '[Unassigned]', 'father': '61', 'value':198}
+,{ 'name': '620', 'title': 'Engineering & allied operations', 'father': '62', 'value':43969}
+,{ 'name': '621', 'title': 'Applied physics', 'father': '62', 'value':107953}
+,{ 'name': '622', 'title': 'Mining & related operations', 'father': '62', 'value':5364}
+,{ 'name': '623', 'title': 'Military & nautical engineering', 'father': '62', 'value':18896}
+,{ 'name': '624', 'title': 'Civil engineering', 'father': '62', 'value':19557}
+,{ 'name': '625', 'title': 'Engineering of railroads & roads', 'father': '62', 'value':6239}
+,{ 'name': '626', 'title': '[Unassigned]', 'father': '62', 'value':21}
+,{ 'name': '627', 'title': 'Hydraulic engineering', 'father': '62', 'value':5475}
+,{ 'name': '628', 'title': 'Sanitary & municipal engineering', 'father': '62', 'value':34997}
+,{ 'name': '629', 'title': 'Other branches of engineering', 'father': '62', 'value':49075}
+,{ 'name': '630', 'title': 'Agriculture & related technologies', 'father': '63', 'value':10371}
+,{ 'name': '631', 'title': 'Techniques, equipment & materials', 'father': '63', 'value':9078}
+,{ 'name': '632', 'title': 'Plant injuries, diseases & pests', 'father': '63', 'value':8661}
+,{ 'name': '633', 'title': 'Field & plantation crops', 'father': '63', 'value':3131}
+,{ 'name': '634', 'title': 'Orchards, fruits & forestry', 'father': '63', 'value':5580}
+,{ 'name': '635', 'title': 'Garden crops (Horticulture)', 'father': '63', 'value':17672}
+,{ 'name': '636', 'title': 'Animal husbandry', 'father': '63', 'value':32159}
+,{ 'name': '637', 'title': 'Processing dairy & related products', 'father': '63', 'value':745}
+,{ 'name': '638', 'title': 'Insect culture', 'father': '63', 'value':689}
+,{ 'name': '639', 'title': 'Hunting, fishing & conservation', 'father': '63', 'value':8751}
+,{ 'name': '640', 'title': 'Home & family management', 'father': '64', 'value':1858}
+,{ 'name': '641', 'title': 'Food & drink', 'father': '64', 'value':42393}
+,{ 'name': '642', 'title': 'Meals & table service', 'father': '64', 'value':764}
+,{ 'name': '643', 'title': 'Housing & household equipment', 'father': '64', 'value':2376}
+,{ 'name': '644', 'title': 'Household utilities', 'father': '64', 'value':193}
+,{ 'name': '645', 'title': 'Household furnishings', 'father': '64', 'value':320}
+,{ 'name': '646', 'title': 'Sewing, clothing & personal living', 'father': '64', 'value':6118}
+,{ 'name': '647', 'title': 'Management of public households', 'father': '64', 'value':7124}
+,{ 'name': '648', 'title': 'Housekeeping', 'father': '64', 'value':471}
+,{ 'name': '649', 'title': 'Child rearing & home care of persons', 'father': '64', 'value':4676}
+,{ 'name': '650', 'title': 'Management & auxiliary services', 'father': '65', 'value':5719}
+,{ 'name': '651', 'title': 'Office services', 'father': '65', 'value':3567}
+,{ 'name': '652', 'title': 'Processes of written communication', 'father': '65', 'value':2481}
+,{ 'name': '653', 'title': 'Shorthand', 'father': '65', 'value':438}
+,{ 'name': '654', 'title': '[Unassigned]', 'father': '65', 'value':30}
+,{ 'name': '655', 'title': '[Unassigned]', 'father': '65', 'value':159}
+,{ 'name': '656', 'title': '[Unassigned]', 'father': '65', 'value':273}
+,{ 'name': '657', 'title': 'Accounting', 'father': '65', 'value':11774}
+,{ 'name': '658', 'title': 'General management', 'father': '65', 'value':121676}
+,{ 'name': '659', 'title': 'Advertising & public relations', 'father': '65', 'value':4352}
+,{ 'name': '660', 'title': 'Chemical engineering', 'father': '66', 'value':13037}
+,{ 'name': '661', 'title': 'Industrial chemicals', 'father': '66', 'value':1269}
+,{ 'name': '662', 'title': 'Explosives, fuels & related products', 'father': '66', 'value':2316}
+,{ 'name': '663', 'title': 'Beverage technology', 'father': '66', 'value':722}
+,{ 'name': '664', 'title': 'Food technology', 'father': '66', 'value':9273}
+,{ 'name': '665', 'title': 'Industrial oils, fats, waxes & gases', 'father': '66', 'value':2120}
+,{ 'name': '666', 'title': 'Ceramic & allied technologies', 'father': '66', 'value':2396}
+,{ 'name': '667', 'title': 'Cleaning, color & coating technologies', 'father': '66', 'value':2410}
+,{ 'name': '668', 'title': 'Technology of other organic products', 'father': '66', 'value':5772}
+,{ 'name': '669', 'title': 'Metallurgy', 'father': '66', 'value':6200}
+,{ 'name': '670', 'title': 'Manufacturing', 'father': '67', 'value':5485}
+,{ 'name': '671', 'title': 'Metalworking & primary metal products', 'father': '67', 'value':2664}
+,{ 'name': '672', 'title': 'Iron, steel & other iron alloys', 'father': '67', 'value':623}
+,{ 'name': '673', 'title': 'Nonferrous metals', 'father': '67', 'value':452}
+,{ 'name': '674', 'title': 'Lumber processing, wood products & cork', 'father': '67', 'value':911}
+,{ 'name': '675', 'title': 'Leather & fur processing', 'father': '67', 'value':102}
+,{ 'name': '676', 'title': 'Pulp & paper technology', 'father': '67', 'value':1473}
+,{ 'name': '677', 'title': 'Textiles', 'father': '67', 'value':2686}
+,{ 'name': '678', 'title': 'Elastomers & elastomer products', 'father': '67', 'value':830}
+,{ 'name': '679', 'title': 'Other products of specific materials', 'father': '67', 'value':99}
+,{ 'name': '680', 'title': 'Manufacture for specific uses', 'father': '68', 'value':285}
+,{ 'name': '681', 'title': 'Precision instruments & other devices', 'father': '68', 'value':3015}
+,{ 'name': '682', 'title': 'Small forge work (Blacksmithing)', 'father': '68', 'value':122}
+,{ 'name': '683', 'title': 'Hardware & household appliances', 'father': '68', 'value':1016}
+,{ 'name': '684', 'title': 'Furnishings & home workshops', 'father': '68', 'value':2605}
+,{ 'name': '685', 'title': 'Leather, fur goods & related products', 'father': '68', 'value':265}
+,{ 'name': '686', 'title': 'Printing & related activities', 'father': '68', 'value':4556}
+,{ 'name': '687', 'title': 'Clothing & accessories', 'father': '68', 'value':454}
+,{ 'name': '688', 'title': 'Other final products & packaging', 'father': '68', 'value':2080}
+,{ 'name': '689', 'title': '[Unassigned]', 'father': '68', 'value':2}
+,{ 'name': '690', 'title': 'Buildings', 'father': '69', 'value':6746}
+,{ 'name': '691', 'title': 'Building materials', 'father': '69', 'value':1868}
+,{ 'name': '692', 'title': 'Auxiliary construction practices', 'father': '69', 'value':1335}
+,{ 'name': '693', 'title': 'Specific materials & purposes', 'father': '69', 'value':1652}
+,{ 'name': '694', 'title': 'Wood construction & carpentry', 'father': '69', 'value':473}
+,{ 'name': '695', 'title': 'Roof covering', 'father': '69', 'value':205}
+,{ 'name': '696', 'title': 'Utilities', 'father': '69', 'value':1244}
+,{ 'name': '697', 'title': 'Heating, ventilating & air-conditioning', 'father': '69', 'value':3561}
+,{ 'name': '698', 'title': 'Detail finishing', 'father': '69', 'value':387}
+,{ 'name': '699', 'title': '[Unassigned]', 'father': '69', 'value':2}
+,{ 'name': '700', 'title': 'The arts; fine & decorative arts', 'father': '70', 'value':8866}
+,{ 'name': '701', 'title': 'Philosophy of fine & decorative arts', 'father': '70', 'value':2043}
+,{ 'name': '702', 'title': 'Miscellany of fine & decorative arts', 'father': '70', 'value':838}
+,{ 'name': '703', 'title': 'Dictionaries of fine & decorative arts', 'father': '70', 'value':106}
+,{ 'name': '704', 'title': 'Special topics in fine & decorative arts', 'father': '70', 'value':3562}
+,{ 'name': '705', 'title': 'Serial publications of fine & decorative arts', 'father': '70', 'value':86}
+,{ 'name': '706', 'title': 'Organizations & management', 'father': '70', 'value':106}
+,{ 'name': '707', 'title': 'Education, research & related topics', 'father': '70', 'value':844}
+,{ 'name': '708', 'title': 'Galleries, museums & private collections', 'father': '70', 'value':1558}
+,{ 'name': '709', 'title': 'Historical, geographic & persons treatment', 'father': '70', 'value':16726}
+,{ 'name': '710', 'title': 'Civic & landscape art', 'father': '71', 'value':14}
+,{ 'name': '711', 'title': 'Area planning', 'father': '71', 'value':7461}
+,{ 'name': '712', 'title': 'Landscape architecture', 'father': '71', 'value':3447}
+,{ 'name': '713', 'title': 'Landscape architecture of trafficways', 'father': '71', 'value':54}
+,{ 'name': '714', 'title': 'Water features', 'father': '71', 'value':141}
+,{ 'name': '715', 'title': 'Woody plants', 'father': '71', 'value':128}
+,{ 'name': '716', 'title': 'Herbaceous plants', 'father': '71', 'value':29}
+,{ 'name': '717', 'title': 'Structures in landscape architecture', 'father': '71', 'value':305}
+,{ 'name': '718', 'title': 'Landscape design of cemeteries', 'father': '71', 'value':29}
+,{ 'name': '719', 'title': 'Natural landscapes', 'father': '71', 'value':454}
+,{ 'name': '720', 'title': 'Architecture', 'father': '72', 'value':0}
+,{ 'name': '721', 'title': 'Architectural structure', 'father': '72', 'value':0}
+,{ 'name': '722', 'title': 'Architecture to ca. 300', 'father': '72', 'value':0}
+,{ 'name': '723', 'title': 'Architecture from ca. 300 to 1399', 'father': '72', 'value':0}
+,{ 'name': '724', 'title': 'Architecture from 1400', 'father': '72', 'value':0}
+,{ 'name': '725', 'title': 'Public structures', 'father': '72', 'value':0}
+,{ 'name': '726', 'title': 'Buildings for religious purposes', 'father': '72', 'value':0}
+,{ 'name': '727', 'title': 'Buildings for education & research', 'father': '72', 'value':0}
+,{ 'name': '728', 'title': 'Residential & related buildings', 'father': '72', 'value':0}
+,{ 'name': '729', 'title': 'Design & decoration', 'father': '72', 'value':0}
+,{ 'name': '730', 'title': 'Plastic arts; sculpture', 'father': '73', 'value':3552}
+,{ 'name': '731', 'title': 'Processes, forms & subjects of sculpture', 'father': '73', 'value':915}
+,{ 'name': '732', 'title': 'Sculpture to ca. 500', 'father': '73', 'value':0}
+,{ 'name': '733', 'title': 'Greek, Etruscan & Roman sculpture', 'father': '73', 'value':349}
+,{ 'name': '734', 'title': 'Sculpture from ca. 500 to 1399', 'father': '73', 'value':42}
+,{ 'name': '735', 'title': 'Sculpture from 1400', 'father': '73', 'value':177}
+,{ 'name': '736', 'title': 'Carving & carvings', 'father': '73', 'value':1484}
+,{ 'name': '737', 'title': 'Numismatics & sigillography', 'father': '73', 'value':1805}
+,{ 'name': '738', 'title': 'Ceramic arts', 'father': '73', 'value':4528}
+,{ 'name': '739', 'title': 'Art metalwork', 'father': '73', 'value':3030}
+,{ 'name': '740', 'title': 'Drawing & decorative arts', 'father': '74', 'value':108}
+,{ 'name': '741', 'title': 'Drawing & drawings', 'father': '74', 'value':40881}
+,{ 'name': '742', 'title': 'Perspective', 'father': '74', 'value':95}
+,{ 'name': '743', 'title': 'Drawing & drawings by subject', 'father': '74', 'value':1647}
+,{ 'name': '744', 'title': '[Unassigned]', 'father': '74', 'value':0}
+,{ 'name': '745', 'title': 'Decorative arts', 'father': '74', 'value':15935}
+,{ 'name': '746', 'title': 'Textile arts', 'father': '74', 'value':13543}
+,{ 'name': '747', 'title': 'Interior decoration', 'father': '74', 'value':4319}
+,{ 'name': '748', 'title': 'Glass', 'father': '74', 'value':1527}
+,{ 'name': '749', 'title': 'Furniture & accessories', 'father': '74', 'value':1504}
+,{ 'name': '750', 'title': 'Painting & paintings', 'father': '75', 'value':0}
+,{ 'name': '751', 'title': 'Techniques, equipment, materials & forms', 'father': '75', 'value':0}
+,{ 'name': '752', 'title': 'Color', 'father': '75', 'value':123}
+,{ 'name': '753', 'title': 'Symbolism, allegory, mythology & legend', 'father': '75', 'value':65}
+,{ 'name': '754', 'title': 'Genre paintings', 'father': '75', 'value':0}
+,{ 'name': '755', 'title': 'Religion', 'father': '75', 'value':0}
+,{ 'name': '756', 'title': '[Unassigned]', 'father': '75', 'value':18}
+,{ 'name': '757', 'title': 'Human figures', 'father': '75', 'value':0}
+,{ 'name': '758', 'title': 'Other subjects', 'father': '75', 'value':1159}
+,{ 'name': '759', 'title': 'Historical, geographic & persons treatment', 'father': '75', 'value':0}
+,{ 'name': '760', 'title': 'Graphic arts; printmaking & prints', 'father': '76', 'value':1950}
+,{ 'name': '761', 'title': 'Relief processes (Block printing)', 'father': '76', 'value':274}
+,{ 'name': '762', 'title': '[Unassigned]', 'father': '76', 'value':2}
+,{ 'name': '763', 'title': 'Lithographic processes', 'father': '76', 'value':45}
+,{ 'name': '764', 'title': 'Chromolithography & serigraphy', 'father': '76', 'value':50}
+,{ 'name': '765', 'title': 'Metal engraving', 'father': '76', 'value':22}
+,{ 'name': '766', 'title': 'Mezzotinting, aquatinting & related processes', 'father': '76', 'value':9}
+,{ 'name': '767', 'title': 'Etching & drypoint', 'father': '76', 'value':62}
+,{ 'name': '768', 'title': '[Unassigned]', 'father': '76', 'value':2}
+,{ 'name': '769', 'title': 'Prints', 'father': '76', 'value':5647}
+,{ 'name': '770', 'title': 'Photography, photographs & computer art', 'father': '77', 'value':4314}
+,{ 'name': '771', 'title': 'Techniques, equipment & materials', 'father': '77', 'value':1953}
+,{ 'name': '772', 'title': 'Metallic salt processes', 'father': '77', 'value':45}
+,{ 'name': '773', 'title': 'Pigment processes of printing', 'father': '77', 'value':10}
+,{ 'name': '774', 'title': 'Holography', 'father': '77', 'value':52}
+,{ 'name': '775', 'title': 'Digital photography', 'father': '77', 'value':530}
+,{ 'name': '776', 'title': 'Computer art (Digital art)', 'father': '77', 'value':241}
+,{ 'name': '777', 'title': '[Unassigned]', 'father': '77', 'value':224}
+,{ 'name': '778', 'title': 'Fields & kinds of photography', 'father': '77', 'value':4782}
+,{ 'name': '779', 'title': 'Photographs', 'father': '77', 'value':8637}
+,{ 'name': '780', 'title': 'Music', 'father': '78', 'value':12951}
+,{ 'name': '781', 'title': 'General principles & musical forms', 'father': '78', 'value':8617}
+,{ 'name': '782', 'title': 'Vocal music', 'father': '78', 'value':14984}
+,{ 'name': '783', 'title': 'Music for single voices; the voice', 'father': '78', 'value':959}
+,{ 'name': '784', 'title': 'Instruments & instrumental ensembles', 'father': '78', 'value':3808}
+,{ 'name': '785', 'title': 'Ensembles with one instrument per part', 'father': '78', 'value':1311}
+,{ 'name': '786', 'title': 'Keyboard & other instruments', 'father': '78', 'value':2601}
+,{ 'name': '787', 'title': 'Stringed instruments', 'father': '78', 'value':2188}
+,{ 'name': '788', 'title': 'Wind instruments', 'father': '78', 'value':1055}
+,{ 'name': '789', 'title': '(Optional number)', 'father': '78', 'value':587}
+,{ 'name': '790', 'title': 'Recreational & performing arts', 'father': '79', 'value':0}
+,{ 'name': '791', 'title': 'Public performances', 'father': '79', 'value':30672}
+,{ 'name': '792', 'title': 'Stage presentations', 'father': '79', 'value':13226}
+,{ 'name': '793', 'title': 'Indoor games & amusements', 'father': '79', 'value':11609}
+,{ 'name': '794', 'title': 'Indoor games of skill', 'father': '79', 'value':5359}
+,{ 'name': '795', 'title': 'Games of chance', 'father': '79', 'value':2916}
+,{ 'name': '796', 'title': 'Athletic & outdoor sports & games', 'father': '79', 'value':52285}
+,{ 'name': '797', 'title': 'Aquatic & air sports', 'father': '79', 'value':4801}
+,{ 'name': '798', 'title': 'Equestrian sports & animal racing', 'father': '79', 'value':3579}
+,{ 'name': '799', 'title': 'Fishing, hunting & shooting', 'father': '79', 'value':5439}
+,{ 'name': '800', 'title': 'Literature & rhetoric', 'father': '80', 'value':10458}
+,{ 'name': '801', 'title': 'Philosophy & theory', 'father': '80', 'value':2916}
+,{ 'name': '802', 'title': 'Miscellany', 'father': '80', 'value':46}
+,{ 'name': '803', 'title': 'Dictionaries & encyclopedias', 'father': '80', 'value':127}
+,{ 'name': '804', 'title': '[Unassigned]', 'father': '80', 'value':50}
+,{ 'name': '805', 'title': 'Serial publications', 'father': '80', 'value':43}
+,{ 'name': '806', 'title': 'Organizations & management', 'father': '80', 'value':38}
+,{ 'name': '807', 'title': 'Education, research & related topics', 'father': '80', 'value':159}
+,{ 'name': '808', 'title': 'Rhetoric & collections of literature', 'father': '80', 'value':16692}
+,{ 'name': '809', 'title': 'History, description & criticism', 'father': '80', 'value':10533}
+,{ 'name': '810', 'title': 'American literature in English', 'father': '81', 'value':4359}
+,{ 'name': '811', 'title': 'American poetry in English', 'father': '81', 'value':17477}
+,{ 'name': '812', 'title': 'American drama in English', 'father': '81', 'value':5414}
+,{ 'name': '813', 'title': 'American fiction in English', 'father': '81', 'value':147529}
+,{ 'name': '814', 'title': 'American essays in English', 'father': '81', 'value':1027}
+,{ 'name': '815', 'title': 'American speeches in English', 'father': '81', 'value':57}
+,{ 'name': '816', 'title': 'American letters in English', 'father': '81', 'value':59}
+,{ 'name': '817', 'title': 'American humor & satire in English', 'father': '81', 'value':218}
+,{ 'name': '818', 'title': 'American miscellaneous writings', 'father': '81', 'value':4453}
+,{ 'name': '819', 'title': '(Optional number)', 'father': '81', 'value':3}
+,{ 'name': '820', 'title': 'English & Old English literatures', 'father': '82', 'value':12017}
+,{ 'name': '821', 'title': 'English poetry', 'father': '82', 'value':82805}
+,{ 'name': '822', 'title': 'English drama', 'father': '82', 'value':31361}
+,{ 'name': '823', 'title': 'English fiction', 'father': '82', 'value':426129}
+,{ 'name': '824', 'title': 'English essays', 'father': '82', 'value':1334}
+,{ 'name': '825', 'title': 'English speeches', 'father': '82', 'value':0}
+,{ 'name': '826', 'title': 'English letters', 'father': '82', 'value':250}
+,{ 'name': '827', 'title': 'English humor & satire', 'father': '82', 'value':0}
+,{ 'name': '828', 'title': 'English miscellaneous writings', 'father': '82', 'value':13118}
+,{ 'name': '829', 'title': 'Old English (Anglo-Saxon)', 'father': '82', 'value':678}
+,{ 'name': '830', 'title': 'Literatures of Germanic languages', 'father': '83', 'value':1987}
+,{ 'name': '831', 'title': 'German poetry', 'father': '83', 'value':4026}
+,{ 'name': '832', 'title': 'German drama', 'father': '83', 'value':1960}
+,{ 'name': '833', 'title': 'German fiction', 'father': '83', 'value':10100}
+,{ 'name': '834', 'title': 'German essays', 'father': '83', 'value':153}
+,{ 'name': '835', 'title': 'German speeches', 'father': '83', 'value':16}
+,{ 'name': '836', 'title': 'German letters', 'father': '83', 'value':24}
+,{ 'name': '837', 'title': 'German humor & satire', 'father': '83', 'value':29}
+,{ 'name': '838', 'title': 'German miscellaneous writings', 'father': '83', 'value':1501}
+,{ 'name': '839', 'title': 'Other Germanic literatures', 'father': '83', 'value':10709}
+,{ 'name': '840', 'title': 'Literatures of Romance languages', 'father': '84', 'value':0}
+,{ 'name': '841', 'title': 'French poetry', 'father': '84', 'value':0}
+,{ 'name': '842', 'title': 'French drama', 'father': '84', 'value':0}
+,{ 'name': '843', 'title': 'French fiction', 'father': '84', 'value':0}
+,{ 'name': '844', 'title': 'French essays', 'father': '84', 'value':0}
+,{ 'name': '845', 'title': 'French speeches', 'father': '84', 'value':0}
+,{ 'name': '846', 'title': 'French letters', 'father': '84', 'value':0}
+,{ 'name': '847', 'title': 'French humor & satire', 'father': '84', 'value':0}
+,{ 'name': '848', 'title': 'French miscellaneous writings', 'father': '84', 'value':0}
+,{ 'name': '849', 'title': 'Occitan & Catalan literatures', 'father': '84', 'value':0}
+,{ 'name': '850', 'title': 'Italian, Romanian & related literatures', 'father': '85', 'value':494}
+,{ 'name': '851', 'title': 'Italian poetry', 'father': '85', 'value':2063}
+,{ 'name': '852', 'title': 'Italian drama', 'father': '85', 'value':481}
+,{ 'name': '853', 'title': 'Italian fiction', 'father': '85', 'value':3855}
+,{ 'name': '854', 'title': 'Italian essays', 'father': '85', 'value':75}
+,{ 'name': '855', 'title': 'Italian speeches', 'father': '85', 'value':0}
+,{ 'name': '856', 'title': 'Italian letters', 'father': '85', 'value':17}
+,{ 'name': '857', 'title': 'Italian humor & satire', 'father': '85', 'value':5}
+,{ 'name': '858', 'title': 'Italian miscellaneous writings', 'father': '85', 'value':312}
+,{ 'name': '859', 'title': 'Romanian & related literatures', 'father': '85', 'value':798}
+,{ 'name': '860', 'title': 'Spanish & Portuguese literatures', 'father': '86', 'value':1475}
+,{ 'name': '861', 'title': 'Spanish poetry', 'father': '86', 'value':3779}
+,{ 'name': '862', 'title': 'Spanish drama', 'father': '86', 'value':1083}
+,{ 'name': '863', 'title': 'Spanish fiction', 'father': '86', 'value':7765}
+,{ 'name': '864', 'title': 'Spanish essays', 'father': '86', 'value':182}
+,{ 'name': '865', 'title': 'Spanish speeches', 'father': '86', 'value':3}
+,{ 'name': '866', 'title': 'Spanish letters', 'father': '86', 'value':6}
+,{ 'name': '867', 'title': 'Spanish humor & satire', 'father': '86', 'value':13}
+,{ 'name': '868', 'title': 'Spanish miscellaneous writings', 'father': '86', 'value':813}
+,{ 'name': '869', 'title': 'Portuguese literature', 'father': '86', 'value':2470}
+,{ 'name': '870', 'title': 'Italic literatures; Latin literature', 'father': '87', 'value':329}
+,{ 'name': '871', 'title': 'Latin poetry', 'father': '87', 'value':1192}
+,{ 'name': '872', 'title': 'Latin dramatic poetry & drama', 'father': '87', 'value':318}
+,{ 'name': '873', 'title': 'Latin epic poetry & fiction', 'father': '87', 'value':752}
+,{ 'name': '874', 'title': 'Latin lyric poetry', 'father': '87', 'value':366}
+,{ 'name': '875', 'title': 'Latin speeches', 'father': '87', 'value':157}
+,{ 'name': '876', 'title': 'Latin letters', 'father': '87', 'value':97}
+,{ 'name': '877', 'title': 'Latin humor & satire', 'father': '87', 'value':76}
+,{ 'name': '878', 'title': 'Latin miscellaneous writings', 'father': '87', 'value':270}
+,{ 'name': '879', 'title': 'Literatures of other Italic languages', 'father': '87', 'value':16}
+,{ 'name': '880', 'title': 'Hellenic literatures; classical Greek', 'father': '88', 'value':758}
+,{ 'name': '881', 'title': 'Classical Greek poetry', 'father': '88', 'value':419}
+,{ 'name': '882', 'title': 'Classical Greek dramatic poetry & drama', 'father': '88', 'value':1572}
+,{ 'name': '883', 'title': 'Classical Greek epic poetry & fiction', 'father': '88', 'value':965}
+,{ 'name': '884', 'title': 'Classical Greek lyric poetry', 'father': '88', 'value':277}
+,{ 'name': '885', 'title': 'Classical Greek speeches', 'father': '88', 'value':141}
+,{ 'name': '886', 'title': 'Classical Greek letters', 'father': '88', 'value':17}
+,{ 'name': '887', 'title': 'Classical Greek humor & satire', 'father': '88', 'value':30}
+,{ 'name': '888', 'title': 'Classical Greek miscellaneous writings', 'father': '88', 'value':240}
+,{ 'name': '889', 'title': 'Modern Greek literature', 'father': '88', 'value':809}
+,{ 'name': '890', 'title': 'Literatures of other languages', 'father': '89', 'value':37}
+,{ 'name': '891', 'title': 'East Indo-European & Celtic literatures', 'father': '89', 'value':29037}
+,{ 'name': '892', 'title': 'Afro-Asiatic literatures; Semitic literatures', 'father': '89', 'value':2254}
+,{ 'name': '893', 'title': 'Non-Semitic Afro-Asiatic literatures', 'father': '89', 'value':93}
+,{ 'name': '894', 'title': 'Altaic, Uralic, Hyperborean & Dravidian', 'father': '89', 'value':2548}
+,{ 'name': '895', 'title': 'Literatures of East & Southeast Asia', 'father': '89', 'value':3992}
+,{ 'name': '896', 'title': 'African literatures', 'father': '89', 'value':357}
+,{ 'name': '897', 'title': 'North American native literatures', 'father': '89', 'value':99}
+,{ 'name': '898', 'title': 'South American native literatures', 'father': '89', 'value':19}
+,{ 'name': '899', 'title': 'Austronesian & other literatures', 'father': '89', 'value':395}
+,{ 'name': '900', 'title': 'History & geography', 'father': '90', 'value':12638}
+,{ 'name': '901', 'title': 'Philosophy & theory', 'father': '90', 'value':1214}
+,{ 'name': '902', 'title': 'Miscellany', 'father': '90', 'value':199}
+,{ 'name': '903', 'title': 'Dictionaries & encyclopedias', 'father': '90', 'value':97}
+,{ 'name': '904', 'title': 'Collected accounts of events', 'father': '90', 'value':381}
+,{ 'name': '905', 'title': 'Serial publications', 'father': '90', 'value':30}
+,{ 'name': '906', 'title': 'Organizations & management', 'father': '90', 'value':10}
+,{ 'name': '907', 'title': 'Education, research & related topics', 'father': '90', 'value':2102}
+,{ 'name': '908', 'title': 'Kinds of persons treatment', 'father': '90', 'value':40}
+,{ 'name': '909', 'title': 'World history', 'father': '90', 'value':8570}
+,{ 'name': '910', 'title': 'Geography & travel', 'father': '91', 'value':23010}
+,{ 'name': '911', 'title': 'Historical geography', 'father': '91', 'value':841}
+,{ 'name': '912', 'title': 'Atlases, maps, charts & plans', 'father': '91', 'value':5810}
+,{ 'name': '913', 'title': 'Geography of & travel in ancient world', 'father': '91', 'value':915}
+,{ 'name': '914', 'title': 'Geography of & travel in Europe', 'father': '91', 'value':58340}
+,{ 'name': '915', 'title': 'Geography of & travel in Asia', 'father': '91', 'value':8994}
+,{ 'name': '916', 'title': 'Geography of & travel in Africa', 'father': '91', 'value':4712}
+,{ 'name': '917', 'title': 'Geography of & travel in North America', 'father': '91', 'value':15276}
+,{ 'name': '918', 'title': 'Geography of & travel in South America', 'father': '91', 'value':1710}
+,{ 'name': '919', 'title': 'Geography of & travel in other areas', 'father': '91', 'value':4460}
+,{ 'name': '920', 'title': 'Biography, genealogy & insignia', 'father': '92', 'value':4153}
+,{ 'name': '921', 'title': '(Optional number)', 'father': '92', 'value':55}
+,{ 'name': '922', 'title': '(Optional number)', 'father': '92', 'value':173}
+,{ 'name': '923', 'title': '(Optional number)', 'father': '92', 'value':139}
+,{ 'name': '924', 'title': '(Optional number)', 'father': '92', 'value':9}
+,{ 'name': '925', 'title': '(Optional number)', 'father': '92', 'value':11}
+,{ 'name': '926', 'title': '(Optional number)', 'father': '92', 'value':9}
+,{ 'name': '927', 'title': '(Optional number)', 'father': '92', 'value':14}
+,{ 'name': '928', 'title': '(Optional number)', 'father': '92', 'value':70}
+,{ 'name': '929', 'title': 'Genealogy, names & insignia', 'father': '92', 'value':13847}
+,{ 'name': '930', 'title': 'History of ancient world to ca. 499', 'father': '93', 'value':7321}
+,{ 'name': '931', 'title': 'China to 420', 'father': '93', 'value':311}
+,{ 'name': '932', 'title': 'Egypt to 640', 'father': '93', 'value':2359}
+,{ 'name': '933', 'title': 'Palestine to 70', 'father': '93', 'value':718}
+,{ 'name': '934', 'title': 'India to 647', 'father': '93', 'value':498}
+,{ 'name': '935', 'title': 'Mesopotamia & Iranian Plateau to 637', 'father': '93', 'value':624}
+,{ 'name': '936', 'title': 'Europe north & west of Italy to ca. 499', 'father': '93', 'value':6317}
+,{ 'name': '937', 'title': 'Italy & adjacent territories to 476', 'father': '93', 'value':3643}
+,{ 'name': '938', 'title': 'Greece to 323', 'father': '93', 'value':2704}
+,{ 'name': '939', 'title': 'Other parts of ancient world to ca. 640', 'father': '93', 'value':2053}
+,{ 'name': '940', 'title': 'History of Europe', 'father': '94', 'value':38843}
+,{ 'name': '941', 'title': 'British Isles', 'father': '94', 'value':29016}
+,{ 'name': '942', 'title': 'England & Wales', 'father': '94', 'value':45672}
+,{ 'name': '943', 'title': 'Central Europe; Germany', 'father': '94', 'value':9964}
+,{ 'name': '944', 'title': 'France & Monaco', 'father': '94', 'value':6692}
+,{ 'name': '945', 'title': 'Italian Peninsula & adjacent islands', 'father': '94', 'value':3492}
+,{ 'name': '946', 'title': 'Iberian Peninsula & adjacent islands', 'father': '94', 'value':3614}
+,{ 'name': '947', 'title': 'Eastern Europe; Russia', 'father': '94', 'value':6495}
+,{ 'name': '948', 'title': 'Scandinavia', 'father': '94', 'value':964}
+,{ 'name': '949', 'title': 'Other parts of Europe', 'father': '94', 'value':3958}
+,{ 'name': '950', 'title': 'History of Asia; Far East', 'father': '95', 'value':0}
+,{ 'name': '951', 'title': 'China & adjacent areas', 'father': '95', 'value':0}
+,{ 'name': '952', 'title': 'Japan', 'father': '95', 'value':0}
+,{ 'name': '953', 'title': 'Arabian Peninsula & adjacent areas', 'father': '95', 'value':0}
+,{ 'name': '954', 'title': 'South Asia; India', 'father': '95', 'value':0}
+,{ 'name': '955', 'title': 'Iran', 'father': '95', 'value':0}
+,{ 'name': '956', 'title': 'Middle East (Near East)', 'father': '95', 'value':0}
+,{ 'name': '957', 'title': 'Siberia (Asiatic Russia)', 'father': '95', 'value':0}
+,{ 'name': '958', 'title': 'Central Asia', 'father': '95', 'value':0}
+,{ 'name': '959', 'title': 'Southeast Asia', 'father': '95', 'value':0}
+,{ 'name': '960', 'title': 'History of Africa', 'father': '96', 'value':1257}
+,{ 'name': '961', 'title': 'Tunisia & Libya', 'father': '96', 'value':320}
+,{ 'name': '962', 'title': 'Egypt & Sudan', 'father': '96', 'value':1095}
+,{ 'name': '963', 'title': 'Ethiopia & Eritrea', 'father': '96', 'value':416}
+,{ 'name': '964', 'title': 'Northwest African coast & offshore islands', 'father': '96', 'value':257}
+,{ 'name': '965', 'title': 'Algeria', 'father': '96', 'value':312}
+,{ 'name': '966', 'title': 'West Africa & offshore islands', 'father': '96', 'value':1838}
+,{ 'name': '967', 'title': 'Central Africa & offshore islands', 'father': '96', 'value':2119}
+,{ 'name': '968', 'title': 'Southern Africa; Republic of South Africa', 'father': '96', 'value':3237}
+,{ 'name': '969', 'title': 'South Indian Ocean islands', 'father': '96', 'value':190}
+,{ 'name': '970', 'title': 'History of North America', 'father': '97', 'value':2454}
+,{ 'name': '971', 'title': 'Canada', 'father': '97', 'value':5779}
+,{ 'name': '972', 'title': 'Middle America; Mexico', 'father': '97', 'value':5214}
+,{ 'name': '973', 'title': 'United States', 'father': '97', 'value':17099}
+,{ 'name': '974', 'title': 'Northeastern United States', 'father': '97', 'value':2160}
+,{ 'name': '975', 'title': 'Southeastern United States', 'father': '97', 'value':1713}
+,{ 'name': '976', 'title': 'South central United States', 'father': '97', 'value':1342}
+,{ 'name': '977', 'title': 'North central United States', 'father': '97', 'value':1138}
+,{ 'name': '978', 'title': 'Western United States', 'father': '97', 'value':1667}
+,{ 'name': '979', 'title': 'Great Basin & Pacific Slope region', 'father': '97', 'value':2039}
+,{ 'name': '980', 'title': 'History of South America', 'father': '98', 'value':1248}
+,{ 'name': '981', 'title': 'Brazil', 'father': '98', 'value':708}
+,{ 'name': '982', 'title': 'Argentina', 'father': '98', 'value':588}
+,{ 'name': '983', 'title': 'Chile', 'father': '98', 'value':388}
+,{ 'name': '984', 'title': 'Bolivia', 'father': '98', 'value':230}
+,{ 'name': '985', 'title': 'Peru', 'father': '98', 'value':659}
+,{ 'name': '986', 'title': 'Colombia & Ecuador', 'father': '98', 'value':499}
+,{ 'name': '987', 'title': 'Venezuela', 'father': '98', 'value':301}
+,{ 'name': '988', 'title': 'Guiana', 'father': '98', 'value':107}
+,{ 'name': '989', 'title': 'Paraguay & Uruguay', 'father': '98', 'value':269}
+,{ 'name': '990', 'title': 'History of other areas', 'father': '99', 'value':86}
+,{ 'name': '991', 'title': '[Unassigned]', 'father': '99', 'value':11}
+,{ 'name': '992', 'title': '[Unassigned]', 'father': '99', 'value':12}
+,{ 'name': '993', 'title': 'New Zealand', 'father': '99', 'value':660}
+,{ 'name': '994', 'title': 'Australia', 'father': '99', 'value':1911}
+,{ 'name': '995', 'title': 'Melanesia; New Guinea', 'father': '99', 'value':194}
+,{ 'name': '996', 'title': 'Other parts of Pacific; Polynesia', 'father': '99', 'value':388}
+,{ 'name': '997', 'title': 'Atlantic Ocean islands', 'father': '99', 'value':439}
+,{ 'name': '998', 'title': 'Arctic islands & Antarctica', 'father': '99', 'value':202}
+,{ 'name': '999', 'title': 'Extraterrestrial worlds', 'father': '99', 'value':67}
+
+  ];
+
+//// Code to turn data into hierarchical JSON format ////
+    var dataMap = data.reduce(function(map, node) {
+        map[node.name] = node;
+        return map;
+    }, {});
+
+    // create the tree array
+
+    var data2 = [];
+    data.forEach(function(node) {
+        // add to parent
+        var father = dataMap[node.father];
+        if (father) {
+            // create child array if it doesn't exist
+            (father.children || (father.children = []))
+                // add node to child array
+                .push(node);
+        } else {
+            // parent is null or missing
+            data2.push(node);
+        }
+    });
+
+    return data2[0];
+};
+</script>
+ <p>por <a href="http://www.subsubroutine.com/sub-subroutine/2014/12/29/dewey-decimal-system-and-books-filed-therein">Cameron Mence</a></p>
+</div>
+</div>
+</section>
+					<section>
+					<h3>Encabezamientos de materia (temas) - Biblioteca del Congreso</h3>
+					<img class="fragment" data-src="temas.png" alt="MARC">
+					<h5 class="fragment">MARC</h5>
+					<img class="fragment" data-src="marc.png" alt="MARC">
+					</section>
+					<section>
+						<!--body style="overflow:hidden;height:100%;"-->
+						<object width="1000" height="800" data="network/index.html" type="text/html" style="padding-top:0cm"></object>
+					</section>
+				</section>
+				<section>
+						<section>
+							<h3>Caso 2. Abrir para crear comunidad</h3>
+							<img data-src="https://media.giphy.com/media/5IqxJsqlCtkqc/giphy.gif">
+						<h6><q cite="http://www.alfonsoreyes.org/boletin.htm">Todo lo sabemos entre todos</q>.
+						<br>Aforismo favorito de Alfonso Reyes</h6>
+						</section>
+						<section>
+							<h3>Exposiciones temáticas</h3>
+							<div style="position:relative; width:640px; height:480px; margin:0 auto;">
+								<img class="fragment" width="640" height="480" src="bibliografxs.png" style="position:absolute;top:0;left:0;" />
+								<img class="fragment" width="640" height="480" src="expo5.png" style="position:absolute;top:0;left:0;" />
+								<img class="fragment" width="640" height="480" src="expo4.png" style="position:absolute;top:0;left:0;" />
+								<img class="fragment" width="640" height="480" src="expo6.png" style="position:absolute;top:0;left:0;" />
+							</div>
+						</section>
+						<section>
+						<h3>Proyectos digitales colaborativos</h3>
+							<body style="overflow:hidden;height:100%;">
+								<iframe class="stretch" data-src="http://zapatavive.colmex.mx"></iframe>	
+							</body>	
+							<p><a href="http://zapatavive.colmex.mx">zapatavive.colmex.mx</a> (📝 con <a href="https://twitter.com/asantimartinez">@asantimartinez</a>)</a></p>
+						</section>
+						<section>
+						<h3>Reflexión conjunta.<br>
+						<span class="fragment">Encuentro sobre Gestión de Datos y Resultados de Investigación</span></h3>
+						<blockquote class="twitter-tweet tw-align-center" data-lang="en"><p lang="es" dir="ltr">Metadatos para la gestión de datos de investigación: propuesta para su implementación. Guadalupe Vega <a href="https://t.co/uWsI9f9eN2">pic.twitter.com/uWsI9f9eN2</a></p>&mdash; Biblioteca Colmex (@BiblioColmex) <a href="https://twitter.com/BiblioColmex/status/976555164734717953?ref_src=twsrc%5Etfw">March 21, 2018</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+</section>
+
+				</section>
+				<section>
+						<section>
+							<h3>Caso 3. Abrir para vincular y conocer</h3>
+							<img data-src="https://i.gifer.com/cLx.gif">
+						</section>
+						<section>
+							<h3>Expertos en información<br>frente a la posverdad</h3>
+							<blockquote class="twitter-tweet tw-align-center" data-lang="en"><p lang="es" dir="ltr">Grupo de bibliográfos, trabajando y contrastando ideas, cifras y argumentos propuestos en el segundo debate por los candidatos a la presidencia <a href="https://twitter.com/INEMexico?ref_src=twsrc%5Etfw">@INEMexico</a>  <a href="https://twitter.com/Pajaropolitico?ref_src=twsrc%5Etfw">@Pajaropolitico</a> <a href="https://twitter.com/VerificadoMX?ref_src=twsrc%5Etfw">@VerificadoMX</a> <a href="https://t.co/hOLvrgnbYQ">pic.twitter.com/hOLvrgnbYQ</a></p>&mdash; Biblioteca Colmex (@BiblioColmex) <a href="https://twitter.com/BiblioColmex/status/998629083754856448?ref_src=twsrc%5Etfw">May 21, 2018</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+						</section>
+						<section data-background-transition="slide" data-background="https://hipertextual.com/files/2016/11/conversacionesgess_0-670x410.jpg">
+						<h3 style="color:#363636; background-color:#F2F0F0;">Vincular información <span class="fragment">en Wikipedia</span></h3>
+							<ul>
+								<h6 class="fragment" style="color:#363636; background-color:#F2F0F0;"><li>La enciclopedia libre más grande del mundo</li></h6>
+								<h6 class="fragment" style="color:#363636; background-color:#F2F0F0;"><li>Dentro de las 10 páginas más vistas</li></h6>
+								<h6 class="fragment" style="color:#363636; background-color:#F2F0F0;"><li>1 millón 400,000 artículos en español</li></h6>
+								<h6 class="fragment" style="color:#363636; background-color:#F2F0F0;"><li>570 millones de visitas diarias</li></h6>
+							</ul>
+						</section>
+						<section>
+							<h3>"Dignos del erario público", rompiendo muros académicos</h3>	
+							<blockquote class="twitter-tweet tw-align-center" data-lang="en"><p lang="es" dir="ltr">Sueño cumplido:Wikipedia en clase de Graciela Márquez <a href="https://twitter.com/ColMex?ref_src=twsrc%5Etfw">@colmex</a>. Gracias <a href="https://twitter.com/Wikimedia_mx?ref_src=twsrc%5Etfw">@Wikimedia_mx</a> <a href="https://twitter.com/BiblioColmex?ref_src=twsrc%5Etfw">@BiblioColmex</a> por ser lo mejor <a href="https://t.co/pA4TPDadJ3">pic.twitter.com/pA4TPDadJ3</a></p>&mdash; Silvia Gutiérrez (@espejolento) <a href="https://twitter.com/espejolento/status/783081706924281856?ref_src=twsrc%5Etfw">October 3, 2016</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+						</section>		
+						<section>
+						<h3>Primer Wikipedista en Residencia en Biblioteca Académica de AmLat</h3>
+							<body style="overflow:hidden;height:100%;">
+								<iframe class="stretch" data-src="https://meta.wikimedia.org/wiki/Grants:Project/ColMex/First_Wikipedian_in_(Academic)_Residence_in_Latin_America"></iframe>	
+							</body>	
+						</section>
+						<section>
+						<h3>1Bib1Ref | 1Lib1Ref</h3>
+							<img data-src="bill1bib1ref.png">
+						</section>
+						<section>
+						<h3>1Bib1Ref | Talleres</h3>
+							<img data-src="https://upload.wikimedia.org/wikipedia/commons/6/66/Banner_taller_1Bib1Ref.jpg">
+						</section>
+						<section>
+						<h3>1Bib1Ref | Bibliógrafxs unidxs</h3>
+							<img data-src="1bib1ref.png" width="60%" height="60%">
+						</section>
+						<section>
+							<h3>1Bib1Ref | Más allá de sólo referencias</h3>	
+						<blockquote class="twitter-tweet tw-align-center" data-lang="en"><p lang="es" dir="ltr">Así se ven las contribuciones de lxs Bibliotecarixs <a href="https://twitter.com/BiblioColmex?ref_src=twsrc%5Etfw">@BiblioColmex</a> en <a href="https://twitter.com/wikidata?ref_src=twsrc%5Etfw">@wikidata</a> en el taller <a href="https://twitter.com/afermva?ref_src=twsrc%5Etfw">@afermva</a> 🗺️<br>¡Más registros de Bibliotecas Públicas de México!📚<br>Qué bonito equipo 💜<a href="https://twitter.com/hashtag/1Lib1Ref?src=hash&amp;ref_src=twsrc%5Etfw">#1Lib1Ref</a> (más o menos) <a href="https://t.co/iz4FBpK5aG">pic.twitter.com/iz4FBpK5aG</a></p>&mdash; Silvia Gutiérrez (@espejolento) <a href="https://twitter.com/espejolento/status/956341221454172166?ref_src=twsrc%5Etfw">January 25, 2018</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+						</section>
+						<section>
+							<h3>1Bib1Ref | Puentes de colaboración</h3>	
+						<blockquote class="twitter-tweet  tw-align-center" data-lang="en"><p lang="es" dir="ltr">Bibliotecarias👩🏾‍💻 y Bibliotecarios👨🏾‍💻 de la Red de Bibliotecas de la <a href="https://twitter.com/udg_oficial?ref_src=twsrc%5Etfw">@udg_oficial</a> estaremos participando de esta iniciativa <a href="https://twitter.com/hashtag/1bib1ref?src=hash&amp;ref_src=twsrc%5Etfw">#1bib1ref</a> como parte de la representación mexicana🇲🇽 en suma con la <a href="https://twitter.com/BiblioColmex?ref_src=twsrc%5Etfw">@BiblioColmex</a> y las Bibliotecas de <a href="https://twitter.com/cultura_mx?ref_src=twsrc%5Etfw">@cultura_mx</a> y con el apoyo de <a href="https://twitter.com/Wikimedia_mx?ref_src=twsrc%5Etfw">@Wikimedia_mx</a> <a href="https://t.co/UIx1VIjzRv">https://t.co/UIx1VIjzRv</a></p>&mdash; USB_REBIUdeG (@USB_REBIUdeG) <a href="https://twitter.com/USB_REBIUdeG/status/991886038472839169?ref_src=twsrc%5Etfw">May 3, 2018</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+						</section>
+						<section>
+						<h3>Editatones pasados</h3>	
+					<img data-src="https://bdcv.hypotheses.org/files/2018/04/Editaton8m.jpg" width="40%" height="40%">
+							<p>
+						- 2 de Diciembre 2017 - <a href="https://es.wikipedia.org/wiki/Wikipedia:Encuentros/Editat%C3%B3n_Louis_Pouzin,_tercer_inventor_de_internet">Louis Pouzin, inventor del Internet</a> <br>
+						- 8 de Marzo 2018 - <a href="https://es.wikipedia.org/wiki/Wikipedia:Encuentros/Editat%C3%B3n:_Haciendo_y_deshaciendo_el_g%C3%A9nero">Haciendo y deshaciendo el género</a> <br>	
+						
+					</p>
+					<img data-src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Agradecimientoeditat%C3%B3n.jpg/500px-Agradecimientoeditat%C3%B3n.jpg" width="40%" height="40%">
+						</section>
+						<section>
+						<h3>Editatones por venir</h3>
+					<img data-src="https://biblioteca.colmex.mx/images/Editaton_oct_banner.jpg">
+					<p>
+						- <a href="https://biblioteca.colmex.mx/index.php/noticias/332-editaton-movimientos-sociales">1 de Octubre - Lucha por la Memoria: Movimientos Sociales</a> <br>
+						- 25 de Octubre - De Voz en Voz: Lenguas de México
+					</p>
+						</section>
+						<section>
+							<h3>"Compartir es el nuevo tener", materiales</h3>
+							<h3 class="fragment"><a href="http://bit.ly/wiki-BDCV">bit.ly/wiki-BDCV</a></h3>
+						</section>
+						<section style="text-align: left;">
+					<h1>¡Gracias!</h1>
+					<p>
+						<h6>Silvia Gutiérrez, Bibliotecaria de Humanidades Digitales</h6><br>
+						<h6><a href="https://biblioteca.colmex.mx/">Biblioteca Daniel Cosío Villegas | El Colegio de México</a></h6><br>
+						<h6>segutierrez@colmex.mx | <a href="https://twitter.com/espejolento">@espejolento</a> <br>
+					</p>
+				</section>
+				</section>
+
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// More info https://github.com/hakimel/reveal.js#dependencies
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>

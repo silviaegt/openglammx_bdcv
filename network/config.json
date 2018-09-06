@@ -1,0 +1,53 @@
+{
+  "type": "network",
+  "version": "1.0",
+  "data": "data.json",
+  "logo": {
+    "text": "",
+    "file": "",
+    "link": ""
+  },
+  "text": {
+    "title": "Red de temas de la BDCV",
+    "more": "pendiente*",
+    "intro": "En esta gráfica mostramos la asociación probabilística entre los subencabezamientos de materia de medio millón (533,957) registros de la Biblioteca Daniel Cosío Villegas. Los vértices muestran qué temas implican a otros y su grosor está codificado según la confianza. Los colores indican el tipo de subcampo (a - nombre personal; x - división general; y - división cronológica; z - división geográfica; etc.)"
+  },
+  "legend": {
+    "edgeLabel": "Confianza",
+    "colorLabel": "Subcampo",
+    "nodeLabel": "Sub-encabezamiento"
+  },
+  "features": {
+    "search": true,
+    "groupSelectorAttribute": "type",
+    "hoverBehavior": "dim"
+  },
+  "informationPanel": {
+    "imageAttribute": false,
+    "groupByEdgeDirection": false
+  },
+  "sigma": {
+    "graphProperties": {
+      "minEdgeSize": 0.2,
+      "maxNodeSize": 7,
+      "maxEdgeSize": 0.5,
+      "minNodeSize": 1
+    },
+    "drawingProperties": {
+      "labelThreshold": 10,
+      "hoverFontStyle": "bold",
+      "defaultEdgeType": "curve",
+      "defaultLabelColor": "#000",
+      "defaultLabelHoverColor": "#fff",
+      "defaultLabelSize": 14,
+      "activeFontStyle": "bold",
+      "fontStyle": "bold",
+      "defaultHoverLabelBGColor": "#002147",
+      "defaultLabelBGColor": "#ddd"
+    },
+    "mouseProperties": {
+      "minRatio": 0.75,
+      "maxRatio": 20
+    }
+  }
+}
